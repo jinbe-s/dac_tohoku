@@ -2,15 +2,25 @@
   <v-app>
     <v-app-bar flat color="primary">
 			<v-container class="d-flex justify-space-between align-center">
-				<div class="d-flex align-center">
-					<v-btn :to="{ name: 'index' }">
-						<v-icon small>mdi-home</v-icon>
-						<v-app-bar-title class="ml-1">{{ siteName }}</v-app-bar-title>
-					</v-btn>
-				</div>
-				<div class="d-flex align-center">
-					<!-- <NuxtLink :to="{ name: 'about' }">参加案内</NuxtLink> -->
-					<v-btn class="ml-2" :to="{ name: 'about' }" variant="text">参加案内</v-btn>
+				<v-app-bar-title class="d-flex align-center">
+					<NuxtLink
+						class="d-flex align-center text-decoration-none"
+						:to="{ name: 'index' }"
+						:style="{ color: 'rgb(var(--v-theme-on-primary))' }"
+					>
+						<v-img :src="icon" :width="40" :height="40" contain class="shrink-0 mr-2" />
+						<span class="font-weight-medium">{{ siteName }}</span>
+					</NuxtLink>
+				</v-app-bar-title>
+
+				<div class="d-flex align-center justify-space-between">
+					<NuxtLink
+						class="text-decoration-none"
+						:to="{ name: 'about' }"
+						:style="{ color: 'rgb(var(--v-theme-on-primary))' }"
+					>
+						<span class="font-weight-medium">参加案内</span>
+					</NuxtLink>
 				</div>
 			</v-container>
     </v-app-bar>
@@ -24,6 +34,8 @@
 </template>
 
 <script setup lang="ts">
-const { public: pub } = useRuntimeConfig()
-const siteName = computed(() => pub.siteName)
+	import icon from '~/assets/icon.png'
+
+	const { public: pub } = useRuntimeConfig()
+	const siteName = computed(() => pub.siteName)
 </script>
