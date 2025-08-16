@@ -1,11 +1,15 @@
 <template>
   <v-container class="py-10">
-    <v-btn color="primary" class="ma-4">Vuetify ボタン</v-btn>
-    <v-alert type="success" text>Vuetifyが表示されています！</v-alert>
+    <BaseCard title="ようこそ">
+      Nuxt + Vuetify コンポーネントの基本形です。
+    </BaseCard>
+    <UserCard :user="{ id: 1, name: 'Saito' }" @select="u => console.log(u)" />
+    <CounterInput v-model="count" />
   </v-container>
 </template>
 
 <script setup lang="ts">
+const count = ref(5)
 useSeoMeta({
   title: 'TOP',
 })

@@ -46,7 +46,7 @@ export default defineNuxtConfig({
     description: 'サイトの簡単な説明文'
   },
   compatibilityDate: '2025-08-16',
-    runtimeConfig: {
+  runtimeConfig: {
     apiBase: process.env.NUXT_API_BASE || '',
     public: {
       siteName: process.env.NUXT_PUBLIC_SITE_NAME || 'DAC TOHOKU',

@@ -10,7 +10,53 @@ export default defineNuxtPlugin((nuxtApp) => {
     components,
     directives,
     ssr: true,
-    theme: { defaultTheme: 'light' }
+    theme: {
+      defaultTheme: 'light',
+      themes: {
+        light: {
+          dark: false,
+          colors: {
+            // Brand
+            primary: '#1E88E5',
+            secondary: '#7C4DFF',
+            accent: '#00B8D9',
+            // Feedback
+            success: '#2E7D32',
+            warning: '#FB8C00',
+            error: '#E53935',
+            info: '#0288D1',
+            // Surfaces
+            background: '#FAFAFA',
+            surface: '#FFFFFF',
+            // Text / Lines
+            textPrimary: '#1F2937',
+            textSecondary: '#6B7280',
+            divider: '#E5E7EB'
+          },
+        },
+        dark: {
+          dark: true,
+          colors: {
+            // Brand
+            primary: '#90CAF9',
+            secondary: '#B39DDB',
+            accent: '#26C6DA',
+            // Feedback
+            success: '#66BB6A',
+            warning: '#FFA726',
+            error: '#EF5350',
+            info: '#29B6F6',
+            // Surface
+            background: '#121212',
+            surface: '#1E1E1E',
+            // Text/Lines
+            textPrimary: '#E5E7EB',
+            textSecondary: '#9CA3AF',
+            divider: '#2D2D2D'
+          },
+        },
+      },
+    }
   })
   nuxtApp.vueApp.use(vuetify)
 })
