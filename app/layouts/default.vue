@@ -14,13 +14,14 @@
 				</v-app-bar-title>
 
 				<div class="d-flex align-center justify-space-between">
-					<NuxtLink
-						class="text-decoration-none"
-						:to="{ name: 'about' }"
-						:style="{ color: 'rgb(var(--v-theme-on-primary))' }"
-					>
-						<span class="font-weight-medium">参加案内</span>
-					</NuxtLink>
+					<HeaderNavLink
+						:items="[
+							{ label: '参加案内', to: { name: 'about' } },
+							{ label: '卓一覧', to: { name: 'about' } },
+							{ label: '過去の開催', href: 'https://dac.10yearsafter.info/' }
+						]"
+						gap-class="ml-5"
+					/>
 				</div>
 			</v-container>
     </v-app-bar>
