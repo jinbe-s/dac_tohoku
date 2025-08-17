@@ -52,6 +52,7 @@ export default defineNuxtConfig({
       siteName: process.env.NUXT_PUBLIC_SITE_NAME || 'DAC TOHOKU',
       siteDescription: process.env.NUXT_PUBLIC_SITE_DESCRIPTION || '',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://dac-tohoku.com',
+      eventData: process.env.NUXT_API_EVENT_DATA || '',
     }
   }
 })

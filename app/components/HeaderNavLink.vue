@@ -4,7 +4,7 @@
       <a
         v-if="isExternal(item)"
         :href="item.href"
-        class="d-inline-flex align-center text-decoration-none"
+        class="text-decoration-none"
         :class="i > 0 ? gapClass : ''"
         :style="{ color: onPrimary }"
         :target="item.target ?? '_blank'"

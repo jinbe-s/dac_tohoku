@@ -13,13 +13,18 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": ["eslint --fix"],
-    "*.{json,md,yml,yaml,css,scss}": ["prettier --write"]
+    "*.{js,ts,vue}": [
+      "eslint --fix"
+    ],
+    "*.{json,md,yml,yaml,css,scss}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "@nuxtjs/robots": "^5.4.0",
     "@nuxtjs/seo": "^3.1.0",
+    "dateformat": "^5.0.3",
     "nuxt": "^4.0.3",
     "nuxt-simple-sitemap": "^4.4.1",
     "sass": "^1.90.0",
