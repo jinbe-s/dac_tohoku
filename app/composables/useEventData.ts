@@ -13,7 +13,7 @@ export const useEventData = () => {
   const { public: pub } = useRuntimeConfig()
   const url = pub.eventData
 
-  const get = () =>
+  const getEventData = () =>
     useFetch<EventDataResponse>(url, {
       method: 'GET',
       server: false,
@@ -22,5 +22,5 @@ export const useEventData = () => {
       key: 'eventData'
     })
 
-  return { get }
+  return { getEventData }
 }

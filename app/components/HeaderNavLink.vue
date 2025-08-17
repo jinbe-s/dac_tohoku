@@ -6,7 +6,7 @@
         :href="item.href"
         class="text-decoration-none"
         :class="i > 0 ? gapClass : ''"
-        :style="{ color: onPrimary }"
+        :style="{ color: 'rgb(var(--v-theme-on-accent))' }"
         :target="item.target ?? '_blank'"
         :rel="item.rel ?? 'noopener noreferrer'"
       >

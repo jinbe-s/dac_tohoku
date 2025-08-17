@@ -24,3 +24,6 @@ logs
 .env
 .env.*
 !.env.example
+
+# add @nuxt/fonts
+.data

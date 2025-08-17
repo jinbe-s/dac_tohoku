@@ -3,6 +3,7 @@ import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   ssr: true,
   modules: [
+    '@nuxt/fonts',
     '@nuxtjs/robots',
     'nuxt-simple-sitemap',
     '@nuxtjs/seo',
@@ -37,6 +38,16 @@ export default defineNuxtConfig({
       ]
     }
   },
+  fonts: {
+    provider: 'google',
+    defaults: {
+      display: 'swap'
+    },
+    families: [
+      { name: 'Inter', weights: [400,600], styles: ['normal'], global: true },
+      { name: 'Noto Sans JP', weights: [400,500,700], styles: ['normal'], global: true },
+    ]
+  },
   css: ['vuetify/styles', '@mdi/font/css/materialdesignicons.css'],
   build: { transpile: ['vuetify'] },
   vite: { ssr: { noExternal: ['vuetify'] } },
@@ -53,6 +64,7 @@ export default defineNuxtConfig({
       siteDescription: process.env.NUXT_PUBLIC_SITE_DESCRIPTION || '',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://dac-tohoku.com',
       eventData: process.env.NUXT_API_EVENT_DATA || '',
+      newInfo: process.env.NUXT_API_NEW_INFO || '',
     }
   }
 })

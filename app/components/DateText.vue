@@ -7,7 +7,7 @@ import dateFormat from 'dateformat'
 import { computed } from 'vue'
 
 const props = withDefaults(defineProps<{
-  value: string | number | Date
+  value: string | number | Date | undefined | null
   output?: string
   fallback?: string // 置き換え
   tag?: string

@@ -1,12 +1,18 @@
 <template>
   <v-container class="py-10">
-    <v-img :src="icon" :width="300" :max-height="300" contain class="mx-auto" />
+    <v-row>
+      <v-col cols="12" class="d-flex flex-column justify-center align-center">
+        <v-img :src="icon" :width="300" :max-height="300" contain class="mx-auto" />
+        <SectionEventInfo />
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" md="6">
+        <TextMainTitle title="新着情報" />
+        <SectionNewInfo />
+      </v-col>
+    </v-row>
 
-    <p class="my-0 text-center">
-      <DateText value="2026/05/06" output="m月d日" />
-    </p>
-
-    <v-divider color="primary" thickness="3" />
   </v-container>
 </template>
 
@@ -18,5 +24,4 @@ useSeoMeta({
 </script>
 
 <style lang="scss" scoped>
-
 </style>
