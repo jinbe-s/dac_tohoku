@@ -7,12 +7,39 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" md="6">
-        <TextMainTitle title="新着情報" />
-        <SectionNewInfo />
+      <v-col cols="12" dense>
+        <v-row dense>
+          <v-col cols="12">
+            <TextMainTitle title="新着情報" />
+          </v-col>
+        </v-row>
+        <v-row dense>
+          <v-col cols="12" md="6">
+            <SectionNewInfo />
+          </v-col>
+          <v-col cols="12" md="6">
+            <LazySectionTwitterTimeline />
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col cols="12" dense>
+        <v-row dense>
+          <v-col cols="12">
+            <TextMainTitle title="スケジュール" />
+          </v-col>
+        </v-row>
+        <v-row dense>
+          <v-col cols="12" md="6">
 
+          </v-col>
+          <v-col cols="12" md="6">
+
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
