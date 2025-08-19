@@ -13,6 +13,8 @@ export const useNewInfo = () => {
       method: 'GET',
       server: false,
       timeout: 10_000,
+      cache: 'no-store',
+      headers: { 'cache-control': 'no-cache' },
       retry: 1,
       key: 'newInfo'
     })

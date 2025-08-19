@@ -1,7 +1,7 @@
 <template>
   <ClientOnly>
     <v-sheet
-      class="px-5 py-3 mt-3 mx-auto d-flex flex-column border-md border-primary rounded-lg"
+      class="px-5 py-3 mt-3 mx-auto d-flex flex-column-reverse border-md border-primary rounded-lg"
     >
       <div
         v-if="pending"
@@ -53,8 +53,8 @@ const sanitized = (html: string) => sanitize(html)
 
 <style scoped>
 .infoItem + .infoItem {
-  margin-top: 6px;
-  padding-top: 6px;
-  border-top: 1px dashed rgb(var(--v-theme-primary));
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed rgb(var(--v-theme-primary));
 }
 </style>

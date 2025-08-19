@@ -1,0 +1,18 @@
+/* smooth scroll */
+html { scroll-behavior: smooth !important; }
+.anchor {
+	scroll-margin-top: 72px !important;
+}
+@media (max-width: 959px) {
+	.anchor { scroll-margin-top: 72px; }
+}
+
+/* btn:hover */
+.v-application { --v-activated-opacity: 0 !important; }
+
+/* media query */
+@media (max-width: 959px) {
+	.text-center-sm {
+		text-align: center !important;
+	}
+}

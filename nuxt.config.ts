@@ -48,7 +48,11 @@ export default defineNuxtConfig({
       { name: 'Noto Sans JP', weights: [400,500,700], styles: ['normal'], global: true },
     ]
   },
-  css: ['vuetify/styles', '@mdi/font/css/materialdesignicons.css'],
+  css: [
+    'vuetify/styles',
+    '@mdi/font/css/materialdesignicons.css',
+    '~/assets/css/base.css'
+  ],
   build: { transpile: ['vuetify'] },
   vite: { ssr: { noExternal: ['vuetify'] } },
   site: {

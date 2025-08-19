@@ -18,8 +18,8 @@ export default defineNuxtPlugin((nuxtApp) => {
           colors: {
             // Brand
             primary: '#1E88E5',
-            secondary: '#7C4DFF',
-            accent: '#00B8D9',
+            secondary: '#42A5A5',
+            accent: '#FFB300',
             // Feedback
             success: '#2E7D32',
             warning: '#FB8C00',
@@ -29,8 +29,8 @@ export default defineNuxtPlugin((nuxtApp) => {
             background: '#FAFAFA',
             surface: '#FFFFFF',
             // Text / Lines
-            textPrimary: '#1F2937',
-            textSecondary: '#6B7280',
+            textPrimary: '#212121',
+            textSecondary: '#616161',
             divider: '#E5E7EB'
           },
         },
