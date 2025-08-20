@@ -26,7 +26,7 @@
                   append-icon="mdi-chevron-right"
                   href="https://google.com"
                   :style="{ '--v-activated-opacity': 0 }"
-                >GM応募詳細</v-btn>
+                >GM応募案内</v-btn>
               </template>
               <template #PL1 #PL2>
                 <v-btn
@@ -81,10 +81,48 @@
         <v-row dense>
           <v-col cols="12" md="6">
             <TextSubTitle title="開催日まで" />
-            <div style="margin-top: 400px">test</div>
+            <SectionScheduleList
+              class="mt-3"
+              :items="[
+                { name: '2/7(土)', title: 'GMエントリー開始' },
+                { name: '3/1(日)', title: 'GMエントリー終了' },
+                { name: '3月前半', title: 'プレイヤー募集開始予定' },
+                { name: '4月前半', title: '卓分け発表'},
+              ]"
+            />
           </v-col>
           <v-col cols="12" md="6">
             <TextSubTitle title="当日" />
+            <SectionScheduleList
+              class="mt-3"
+              :items="[
+                {
+                  name: '09:30',
+                  title: '開場',
+                  text: 'お手伝いいただける方は09:00からの設営補助をお願いします',
+                },
+                {
+                  name: '10:00',
+                  title: '受付開始',
+                  text: ''
+                },
+                {
+                  name: '10:30',
+                  title: '開会式',
+                  text: '',
+                },
+                {
+                  name: '18:15',
+                  title: 'セッション終了',
+                  text: '',
+                },
+                {
+                  name: '18:20',
+                  title: '閉会式',
+                  text: '',
+                },
+              ]"
+            />
           </v-col>
         </v-row>
       </v-col>
@@ -98,13 +136,46 @@
         </v-row>
         <v-row dense>
           <v-col cols="12" sm="4">
-            <v-card>test1</v-card>
+            <v-sheet
+              class="pa-2 mx-auto border-md rounded-lg"
+            >
+              <p class="my-0 text-center">
+                <string class="font-weight-bold">GM/DM参加</string>
+                <span
+                  class="text-primary text-h5 font-weight-bold"
+                  style="display: block;"
+                >&yen;0</span>
+                <span class="text-body-2">イベント参加費は不要</span>
+              </p>
+            </v-sheet>
           </v-col>
           <v-col cols="12" sm="4">
-            <v-card>test2</v-card>
+            <v-sheet
+              class="pa-2 mx-auto border-md rounded-lg"
+            >
+              <p class="my-0 text-center">
+                <string class="font-weight-bold">一般参加</string>
+                <span
+                  class="text-primary text-h5 font-weight-bold"
+                  style="display: block;"
+                >&yen;1,000</span>
+                <span class="text-body-2">当日受付で支払い</span>
+              </p>
+            </v-sheet>
           </v-col>
           <v-col cols="12" sm="4">
-            <v-card>test3</v-card>
+            <v-sheet
+              class="pa-2 mx-auto border-md rounded-lg"
+            >
+              <p class="my-0 text-center">
+                <string class="font-weight-bold">学生参加</string>
+                <span
+                  class="text-primary text-h5 font-weight-bold"
+                  style="display: block;"
+                >&yen;500</span>
+                <span class="text-body-2">要学生証提示</span>
+              </p>
+            </v-sheet>
           </v-col>
         </v-row>
       </v-col>

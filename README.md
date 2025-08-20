@@ -16,3 +16,7 @@ Locally preview production build:
 ```bash
 yarn preview
 ```
+
+## イベント日設定
+
+app/config/events.tsに追記
