@@ -20,7 +20,7 @@
 
       <template
         v-else
-        v-for="(item, i) in data" :key="`newInfo-${{i}}`"
+        v-for="(item, i) in data" :key="i"
       >
         <div
           v-if="item?.display"

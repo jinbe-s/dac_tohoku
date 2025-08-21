@@ -18,7 +18,7 @@
           </p>
           <div class="d-flex justify-center align-center ga-4 my-4">
             <UtilPhase>
-              <template #GM1 #GM2>
+              <template v-for="k in ['GM1', 'GM2']" :key="i" v-slot:[k]>
                 <v-btn
                   color="primary"
                   rounded="lg"
@@ -28,7 +28,7 @@
                   :style="{ '--v-activated-opacity': 0 }"
                 >GM応募案内</v-btn>
               </template>
-              <template #PL1 #PL2>
+              <template v-for="k in ['PL1', 'PL2']" :key="i" v-slot:[k]>
                 <v-btn
                   color="primary"
                   rounded="lg"
@@ -162,7 +162,7 @@
       </v-col>
     </v-row>
     <UtilPhase>
-      <template #GM1 #GM2 #PL1 #PL2>
+      <template v-for="k in ['GM1', 'GM2', 'PL1', 'PL2']" :key="k" v-slot:[k]>
         <v-row>
           <v-col cols="12">
             <SectionHowToJoin />

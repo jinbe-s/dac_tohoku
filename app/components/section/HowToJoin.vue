@@ -15,7 +15,7 @@
     </div>
     <div class="d-flex flex-item align-center ga-4 my-4">
       <UtilPhase>
-        <template #GM1 #GM2>
+        <template v-for="k in ['GM1', 'GM2']" :key="i" v-slot:[k]>
           <v-btn
             color="primary"
             rounded="lg"
@@ -25,7 +25,7 @@
             :style="{ 'border': '1px solid rgba(255, 255, 255, 0.5)' }"
           >GM応募する</v-btn>
         </template>
-        <template #PL1 #PL2>
+        <template v-for="k in ['PL1', 'PL2']" :key="i" v-slot:[k]>
           <v-btn
             color="primary"
             rounded="lg"

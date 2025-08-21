@@ -37,7 +37,7 @@
       class="d-flex flex-column align-center justify-center ga-1"
     >
       <UtilPhase>
-        <template #GM1 #GM2>
+        <template v-for="k in ['GM1', 'GM2']" :key="i" v-slot:[k]>
           <v-btn
             block
             color="accent"
@@ -49,7 +49,7 @@
             :style="{ '--v-activated-opacity': 0 }"
           ><b>GM応募する</b></v-btn>
         </template>
-        <template #PL1 #PL2>
+        <template v-for="k in ['PL1', 'PL2']" :key="i" v-slot:[k]>
           <v-btn
             block
             color="accent"
