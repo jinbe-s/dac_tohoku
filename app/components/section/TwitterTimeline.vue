@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="px-5 py-3 mt-3 mx-auto d-flex flex-column border-md border-primary rounded-lg"
+    class="px-5 py-3 mx-auto d-flex flex-column border-md border-primary rounded-lg"
   >
     <ClientOnly>
       <div ref="twRoot">

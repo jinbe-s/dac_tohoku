@@ -18,7 +18,7 @@
       {
         icon: 'mdi-train',
         title: 'アクセス',
-        mainText: '仙台市地下鉄南北線「勾当台公園駅」下車\n（「公園出口2」より徒歩2分）',
+        mainText: '仙台市営地下鉄南北線「勾当台公園駅」下車\n（「公園出口2」より徒歩2分）',
       },
       {
         icon: 'mdi-currency-jpy',

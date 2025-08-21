@@ -1,5 +1,5 @@
 <template>
-  <h2 class="text-h5 font-weight-bold title-wrapper px-5 anchor" :id=sectionId }}>
+  <h2 class="mt-4 text-h5 font-weight-bold title-wrapper px-5 anchor" :id=sectionId }}>
     <span class="">{{ title }}</span>
   </h2>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <ClientOnly>
     <v-sheet
-      class="px-5 py-3 mt-3 mx-auto d-flex flex-column-reverse border-md border-primary rounded-lg"
+      class="px-5 py-3 mx-auto d-flex flex-column-reverse border-md border-primary rounded-lg"
     >
       <div
         v-if="pending"
