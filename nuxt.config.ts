@@ -69,6 +69,7 @@ export default defineNuxtConfig({
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://dac-tohoku.com',
       eventData: process.env.NUXT_API_EVENT_DATA || '',
       newInfo: process.env.NUXT_API_NEW_INFO || '',
+      sessionList: process.env.NUXT_API_SESSION_LIST || '',
     }
   }
 })

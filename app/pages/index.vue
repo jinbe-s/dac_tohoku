@@ -170,7 +170,7 @@
         </v-row>
       </template>
     </UtilPhase>
-    <v-row>
+    <!-- <v-row>
       <v-col cols="12">
         <TextMainTitle title="FAQ" section-id="faq" />
       </v-col>
@@ -179,7 +179,7 @@
       <v-col cols="12">
         テスト
       </v-col>
-    </v-row>
+    </v-row> -->
   </v-container>
 </template>
 

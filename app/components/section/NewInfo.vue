@@ -13,9 +13,8 @@
       <v-alert
         v-else-if="error"
         type="error"
-        text
+        :text="`APIの取得に失敗しました: ${ error.message }`"
       >
-        APIの取得に失敗しました: {{ error.message }}
       </v-alert>
 
       <template

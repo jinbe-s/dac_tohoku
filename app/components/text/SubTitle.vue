@@ -1,5 +1,5 @@
 <template>
-  <h3 class="text-h6 font-weight-bold title-wrapper text-center text-primary" }}>
+  <h3 class="text-h6 font-weight-bold title-wrapper text-center text-primary">
     <span class="title-inner px-3">{{ title }}</span>
   </h3>
 </template>

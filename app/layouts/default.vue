@@ -18,7 +18,7 @@
 						:items="[
 							{ label: 'Home', to: { name: 'index'} },
 							{ label: '参加案内', to: { name: 'about' } },
-							{ label: '卓一覧', to: { name: 'about' } },
+							{ label: '卓一覧', to: { name: 'session' } },
 							{ label: '過去の開催', href: 'https://dac.10yearsafter.info/' }
 						]"
 						gap-class="ml-5"
