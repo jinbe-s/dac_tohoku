@@ -1,8 +1,8 @@
 export type SessionListResponse = {
   table_id: string
-  day_1: boolean
-  day_2: boolean
-  both: boolean
+  day_1: number
+  day_2: number
+  both: number
   system_name: string
   system_name_short: string
   system_dm_name: string
@@ -16,12 +16,13 @@ export type SessionListResponse = {
   session_battle: string
   session_rp: string
   session_gimmick: string
-  is_preparation: boolean
-  session_beginner: boolean
-  system_beginner: boolean
-  experience: boolean
-  skilled: boolean
+  is_preparation: number
+  session_beginner: number
+  system_beginner: number
+  experience: number
+  skilled: number
   english: string
+  players: string[]
 }
 
 export const useSessionList = () => {

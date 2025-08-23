@@ -1,7 +1,10 @@
 <template>
   <div class="table-wrapper" :class="class">
     <template v-if="items.length === 0">
-      <p class="text-center text-body-1 font-weight-bold">予定されているセッションはありません</p>
+      <p
+        class="text-center text-body-1 font-weight-bold"
+        v-text="'予定されているセッションはありません'"
+      />
     </template>
     <v-data-table
       v-else
@@ -35,14 +38,13 @@
               :to="{ hash: `#${item.table_id}` }"
               class="text-decoration-none"
               :style="{ color: 'rgb(var(--v-theme-primary))' }"
-            >
-              {{ item.session_name }}
-            </NuxtLink>
+              v-text="item.session_name"
+            />
           </td>
-          <td :style="{ 'width': '180px' }">{{ item.dm_name }}</td>
-          <td :style="{ 'width': '70px' }">{{ item.system_name_short }}</td>
-          <td :style="{ 'width': '80px' }">{{ item.session_lv }}</td>
-          <td :style="{ 'width': '80px' }">{{ item.session_number }}</td>
+          <td :style="{ 'width': '180px' }" v-text="item.dm_name" />
+          <td :style="{ 'width': '70px' }" v-text="item.system_name_short" />
+          <td :style="{ 'width': '80px' }" v-text="item.session_lv" />
+          <td :style="{ 'width': '80px' }" v-text="item.session_number" />
         </tr>
       </template>
     </v-data-table>

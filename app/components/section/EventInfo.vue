@@ -65,7 +65,8 @@
       <p
         v-if="isEventPhaseActive.length"
         class="mt-1 text-textSecondary text-body-2 text-center"
-      >※外部フォームに移動します</p>
+        v-text="'※外部フォームに移動します'"
+      />
     </div>
   </v-sheet>
 </template>

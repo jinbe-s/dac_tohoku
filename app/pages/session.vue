@@ -42,6 +42,20 @@
             </v-col>
           </v-row>
         </template>
+        <template v-for="item in [
+          { title: '5月23日 セッション詳細', items: day1List, sectionId: 'day1Detail' },
+          { title: '5月24日 セッション詳細', items: day2List, sectionId: 'day2Detail' },
+          { title: '両日卓 セッション詳細', items: wList, sectionId: 'wDetail' },
+        ]">
+          <v-row>
+            <v-col cols="12">
+              <TextMainTitle :title="item.title" :section-id="item.sectionId" />
+              <SectionSessionDetail
+                :items="item.items"
+              />
+            </v-col>
+          </v-row>
+        </template>
       </template>
     </v-container>
   </ClientOnly>

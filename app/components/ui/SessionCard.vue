@@ -11,7 +11,10 @@
           rounded="lg"
           elevation="0"
           variant="tonal"
-          :style="{ color: 'rgb(var(--v-theme-textPrimary))' }"
+          :style="{
+            color: 'rgb(var(--v-theme-textPrimary))',
+            height: '30px'
+          }"
         >一覧</v-btn>
         <v-btn
           :to="{ hash: `#${detailHash}` }"
@@ -19,7 +22,10 @@
           rounded="lg"
           elevation="0"
           variant="tonal"
-          :style="{ color: 'rgb(var(--v-theme-textPrimary))' }"
+          :style="{
+            color: 'rgb(var(--v-theme-textPrimary))',
+            height: '30px'
+          }"
         >詳細</v-btn>
       </div>
     </div>
