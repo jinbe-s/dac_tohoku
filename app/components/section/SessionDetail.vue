@@ -41,23 +41,27 @@
             v-text="`PC事前準備：${ item.is_preparation ? 'あり' : 'なし' }`"
           />
         </div>
-        <div class="d-flex align-center justify-center ga-3 mt-2">
-          <span
-            :class="[detailChipClass2, { 'opacity-30': !item.session_beginner }]"
-            v-text="'TRPG初心者向け'"
-          />
-          <span
-            :class="[detailChipClass2, { 'opacity-30': !item.system_beginner }]"
-            v-text="'システム初心者向け'"
-          />
-          <span
-            :class="[detailChipClass2, { 'opacity-30': !item.experience }]"
-            v-text="'システム経験者向け'"
-          />
-          <span
-            :class="[detailChipClass2, { 'opacity-30': !item.skilled }]"
-            v-text="'システム熟練者向け'"
-          />
+        <div class="d-md-inline-flex align-center justify-center ga-3 mt-2 session-tendency">
+          <div class="d-flex align-center justify-center ga-3">
+            <span
+              :class="[detailChipClass2, { 'opacity-30': !item.session_beginner }]"
+              v-text="'TRPG初心者向け'"
+            />
+            <span
+              :class="[detailChipClass2, { 'opacity-30': !item.system_beginner }]"
+              v-text="'システム初心者向け'"
+            />
+          </div>
+          <div class="d-flex align-center justify-center ga-3 mt-mobile-2">
+            <span
+              :class="[detailChipClass2, { 'opacity-30': !item.experience }]"
+              v-text="'システム経験者向け'"
+            />
+            <span
+              :class="[detailChipClass2, { 'opacity-30': !item.skilled }]"
+              v-text="'システム熟練者向け'"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -83,6 +87,69 @@
             v-text="item.dm_introduce"
           />
         </div>
+        <div class="session-detail-item">
+          <p
+            class="text-primary font-weight-bold"
+            v-text="`${item.system_dm_name}経験`"
+          />
+          <p
+            class="text-body-1 pre-line"
+            v-text="item.dm_experience"
+          />
+        </div>
+        <div class="session-detail-item">
+          <p
+            class="text-primary font-weight-bold"
+            v-text="'レギュレーション'"
+          />
+          <p
+            class="text-body-1 pre-line"
+            v-text="item.regulation"
+          />
+        </div>
+        <div class="session-detail-item">
+          <p
+            class="text-primary font-weight-bold"
+            v-text="'シナリオ概要'"
+          />
+          <p
+            class="text-body-1 pre-line"
+            v-text="item.overview"
+          />
+        </div>
+        <div class="session-detail-item">
+          <p
+            class="text-primary font-weight-bold"
+            v-text="'シナリオ傾向 1(小)〜5(大)'"
+          />
+          <UiScenarioMetric label="戦闘" :value="item.session_battle" variant="bar" />
+          <UiScenarioMetric label="物語性" :value="item.session_rp" variant="bar" />
+          <UiScenarioMetric label="ギミック" :value="item.session_gimmick" variant="bar" />
+          <template
+            v-if="
+              item.session_others.name.length > 0
+              && item.session_others.point.length > 0
+              && item.session_others.name.length === item.session_others.point.length
+            "
+            v-for="i in item.session_others.name.length"
+          >
+            <UiScenarioMetric
+              :label="item.session_others.name[i-1] || ''"
+              :value="item.session_others.point[i-1] || '0'"
+              variant="bar"
+            />
+          </template>
+        </div>
+        <div class="session-detail-item">
+          <p
+            class="text-primary font-weight-bold"
+            v-text="'英語対応'"
+          />
+          <p
+            class="text-body-1 pre-line"
+            v-text="item.english"
+          />
+        </div>
       </div>
     </v-sheet>
   </div>
@@ -98,7 +165,7 @@ const detailChipClass1 = 'py-1 px-3 rounded-lg bg-background text-center text-pr
 const detailChipClass2 = 'py-1 px-3 rounded-lg border-sm border-background border-opacity-100 text-background text-body-1 font-weight-bold'
 </script>
 
-<style>
+<style scoped lang="scss">
 .session-detail-item + .session-detail-item {
   border-top: 2px dotted rgb(var(--v-theme-primary));
   padding-top: 8px;
@@ -107,5 +174,15 @@ const detailChipClass2 = 'py-1 px-3 rounded-lg border-sm border-background borde
 
 .pre-line {
   white-space: pre-line;
+}
+
+@media (max-width: 959px) {
+  .mt-mobile-2 {
+    margin-top: 8px !important;
+  }
+
+  .session-tendency span {
+    min-width: 175px;
+  }
 }
 </style>

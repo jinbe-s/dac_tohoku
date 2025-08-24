@@ -11,18 +11,23 @@ export type SessionListResponse = {
   session_lv: string
   session_number: string
   dm_introduce: string
+  dm_experience: string
   regulation: string
   overview: string
   session_battle: string
   session_rp: string
   session_gimmick: string
+  session_others: {
+    name: string[]
+    point: string[]
+  }
   is_preparation: number
   session_beginner: number
   system_beginner: number
   experience: number
   skilled: number
   english: string
-  players: string[]
+  players?: string[]
 }
 
 export const useSessionList = () => {

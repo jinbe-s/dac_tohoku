@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <v-container>
+    <v-container class="py-10">
       <template v-if="pending || error">
         <v-row>
           <v-col cols="12">
