@@ -13,18 +13,14 @@ export default defineNuxtConfig({
       })
     },
   ],
-  // GitHub Pages最適化
   nitro: {
-    preset: 'github_pages',            // 404.htmlなどを自動整備
+    preset: 'github_pages',
     prerender: {
-      crawlLinks: true                 // 内部リンクを辿って自動プリレンダー
-      // routes: ['/', '/about']       // 固定的に追加したいルートがあれば指定
+      crawlLinks: true
     }
   },
-  // ★プロジェクトページ（/repo-name/配下）で公開する場合のみ baseURL を '/<REPO>/' に設定
-  // 独自ドメインで直配下に出す場合は '/' のままでOK
   app: {
-    baseURL: '/',                      // 例: '/my-site/' にするとプロジェクトページ用
+    baseURL: process.env.NUXT_PUBLIC_BASE || '/',
     head: {
       titleTemplate: '%s | DAC TOHOKU',
       meta: [
@@ -68,6 +64,7 @@ export default defineNuxtConfig({
       siteName: process.env.NUXT_PUBLIC_SITE_NAME || 'DAC TOHOKU',
       siteDescription: process.env.NUXT_PUBLIC_SITE_DESCRIPTION || '',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://dac-tohoku.com',
+      base: process.env.NUXT_PUBLIC_BASE || '/',
       eventData: process.env.NUXT_API_EVENT_DATA || '',
       newInfo: process.env.NUXT_API_NEW_INFO || '',
       sessionList: process.env.NUXT_API_SESSION_LIST || '',
