@@ -120,7 +120,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'About',
+  title: '参加案内',
 })
 
 const primary = 'rgb(var(--v-theme-primary))'

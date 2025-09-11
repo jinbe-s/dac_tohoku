@@ -71,6 +71,10 @@ const allList = computed<SessionListResponse[]>(() => data.value ?? [])
 const day1List = computed(() => allList.value.filter(r => r.day_1 === 1))
 const day2List = computed(() => allList.value.filter(r => r.day_2 === 1))
 const wList = computed(() => allList.value.filter(r => r.both === 1))
+
+useSeoMeta({
+  title: '卓一覧',
+})
 </script>
 
 <style lang="scss" scoped>

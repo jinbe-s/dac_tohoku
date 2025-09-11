@@ -41,4 +41,10 @@
 
 	const { public: pub } = useRuntimeConfig()
 	const siteName = computed(() => pub.siteName)
+
+	useHead({
+		link: [
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+		]
+	})
 </script>

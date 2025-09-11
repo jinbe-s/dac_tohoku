@@ -35,6 +35,7 @@ export default defineNuxtConfig({
       ],
       link: [
         // { rel: 'canonical', href: 'https://example.com' } // 後で独自ドメイン確定後に設定
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     }
   },
