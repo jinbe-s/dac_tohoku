@@ -13,6 +13,11 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NUXT_PUBLIC_BASE: /dac_tohoku/
+      NUXT_API_EVENT_DATA: ${{ vars.NUXT_API_EVENT_DATA }}
+      NUXT_API_NEW_INFO: ${{ vars.NUXT_API_NEW_INFO }}
+      NUXT_API_SESSION_LIST: ${{ vars.NUXT_API_SESSION_LIST }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
