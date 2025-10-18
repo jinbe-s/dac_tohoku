@@ -12,8 +12,8 @@
       {
         icon: 'mdi-map-marker-outline',
         title: '会場',
-        mainText: 'エル・パーク仙台 セミナーホール1・2',
-        subText: '宮城県仙台市青葉区一番町4-11-1\n141ビル（仙台三越定禅寺通り館）5階・6階',
+        mainText: 'エル・パーク仙台 ギャラリーホール',
+        subText: '宮城県仙台市青葉区一番町4-11-1\n141ビル（仙台三越定禅寺通り館）6階',
       },
       {
         icon: 'mdi-train',
@@ -23,7 +23,7 @@
       {
         icon: 'mdi-currency-jpy',
         title: '参加費',
-        mainText: 'DM・GM参加 &yen;0 ／ 一般 &yen;1,000 ／ 学生 &yen;500',
+        mainText: 'DM・GM参加 &yen;0 ／ 一般 &yen;1,500 ／ 学生 &yen;1000',
       }
     ]" :key="i">
       <UiMultiLineTextWithIcon

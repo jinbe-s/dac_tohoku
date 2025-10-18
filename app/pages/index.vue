@@ -111,8 +111,8 @@
     <v-row>
       <template v-for="(item, i) in [
         { title: 'GM/DM参加', price: '0', text: 'イベント参加費は不要' },
-        { title: 'PL一般参加', price: '1,000', text: '当日受付で支払い' },
-        { title: 'PL学生参加', price: '500', text: '要学生証提示' },
+        { title: 'PL一般参加', price: '1,500', text: '当日受付で支払い' },
+        { title: 'PL学生参加', price: '1000', text: '要学生証提示' },
       ]" :key="i">
         <v-col cols="12" sm="4">
           <UiPriceCard
