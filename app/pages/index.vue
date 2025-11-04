@@ -18,23 +18,23 @@
           </p>
           <div class="d-flex justify-center align-center ga-4 my-4">
             <UtilPhase>
-              <template v-for="k in ['GM1', 'GM2']" :key="i" v-slot:[k]>
+              <template v-for="k in ['GM1', 'GM2']" :key="k" v-slot:[k]>
                 <v-btn
                   color="primary"
                   rounded="lg"
                   elevation="0"
                   append-icon="mdi-chevron-right"
-                  href="https://google.com"
+                  to="/about#dmRecruit"
                   :style="{ '--v-activated-opacity': 0 }"
                 >GM応募案内</v-btn>
               </template>
-              <template v-for="k in ['PL1', 'PL2']" :key="i" v-slot:[k]>
+              <template v-for="k in ['PL1', 'PL2']" :key="k" v-slot:[k]>
                 <v-btn
                   color="primary"
                   rounded="lg"
                   elevation="0"
                   append-icon="mdi-chevron-right"
-                  href="https://google.com"
+                  to="/about#plRecruit"
                   :style="{ '--v-activated-opacity': 0 }"
                 >PL応募詳細</v-btn>
               </template>
@@ -157,7 +157,7 @@
         <v-sheet
           class="google-map border-md rounded-md"
         >
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.594739501411!2d140.86850477583928!3d38.26570417186577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a282561eddbd9%3A0xf3e5a6b08ed7e097!2z44Ko44Or44O744OR44O844Kv5LuZ5Y-w!5e0!3m2!1sja!2sjp!4v1755742086689!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen=false loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.594739501411!2d140.86850477583928!3d38.26570417186577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a282561eddbd9%3A0xf3e5a6b08ed7e097!2z44Ko44Or44O744OR44O844Kv5LuZ5Y-w!5e0!3m2!1sja!2sjp!4v1755742086689!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </v-sheet>
       </v-col>
     </v-row>

@@ -22,15 +22,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: process.env.NUXT_PUBLIC_BASE || '/',
     head: {
-      titleTemplate: '%s | DAC TOHOKU',
-      meta: [
-        { name: 'description', content: 'サイトの簡単な説明文' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'DAC TOHOKU' },
-        { name: 'twitter:card', content: 'summary_large_image' }
-      ],
       link: [
-        // { rel: 'canonical', href: 'https://example.com' } // 後で独自ドメイン確定後に設定
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     }
@@ -53,17 +45,17 @@ export default defineNuxtConfig({
   build: { transpile: ['vuetify'] },
   vite: { ssr: { noExternal: ['vuetify'] } },
   site: {
-    url: 'https://dac-tohoku.com',        // 独自ドメイン確定後に置き換え
-    name: 'DAC TOHOKU',
-    description: 'サイトの簡単な説明文'
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://dac-tohoku.com',
+    name: process.env.NUXT_PUBLIC_SITE_NAME || 'DAC TOHOKU',
+    description: process.env.NUXT_PUBLIC_SITE_DESCRIPTION || '宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション'
   },
   compatibilityDate: '2025-08-16',
   runtimeConfig: {
     apiBase: process.env.NUXT_API_BASE || '',
     public: {
       siteName: process.env.NUXT_PUBLIC_SITE_NAME || 'DAC TOHOKU',
-      siteDescription: process.env.NUXT_PUBLIC_SITE_DESCRIPTION || '',
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://dac-tohoku.com',
+      siteDescription: process.env.NUXT_PUBLIC_SITE_DESCRIPTION || '宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://dac-tohoku.com',
       base: process.env.NUXT_PUBLIC_BASE || '/',
       eventData: process.env.NUXT_API_EVENT_DATA || '',
       newInfo: process.env.NUXT_API_NEW_INFO || '',

@@ -3,20 +3,19 @@ export const useSiteMeta = (opts?: {
   description?: string
 }) => {
   const { public: pub } = useRuntimeConfig()
+  const route = useRoute()
 
   const fullTitle = opts?.title
     ? `${opts.title} | ${pub.siteName}`
     : pub.siteName
 
   const description = opts?.description || pub.siteDescription
-  const url = pub.siteUrl
+  const pageUrl = `${pub.siteUrl}${route.path}`
 
+  // ページ固有のメタ情報を上書き
   useHead({
-    titleTemplate: (titleChunk) => {
-      return titleChunk ? `${titleChunk} | ${pub.siteName}` : pub.siteName
-    },
     link: [
-      { rel: 'canonical', href: url }
+      { rel: 'canonical', href: pageUrl }
     ]
   })
 
@@ -26,7 +25,8 @@ export const useSiteMeta = (opts?: {
     ogTitle: fullTitle,
     ogDescription: description,
     ogType: 'website',
-    ogUrl: url,
+    ogUrl: pageUrl,
+    ogSiteName: pub.siteName,
     twitterCard: 'summary_large_image'
   })
 }
