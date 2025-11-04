@@ -1,8 +1,8 @@
 <template>
   <v-container class="py-10">
     <div class="d-flex flex-column justify-center ga-3 align-center">
-      <p class="font-weight-bold text-h6 text-center">
-        DAC TOHOKUについての質問・連絡は下記Googleフォーム<br>または公式X(旧Twitter)アカウントのリプライ・DMにてお願いします。
+      <p class="font-weight-bold text-h6 text-sm-h5 text-center px-2">
+        DAC TOHOKUについての質問・連絡は下記Googleフォーム<br class="d-none d-sm-inline">または公式X(旧Twitter)アカウントのリプライ・DMにてお願いします。
       </p>
       <v-btn
         color="primary"

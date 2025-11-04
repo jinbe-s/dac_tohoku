@@ -16,7 +16,7 @@
             DAC TOHOKUは年に一度、宮城県仙台市で開催するTRPGコンベンションです。<br>
             D&D(ダンジョンズ&ドラゴンズ)やpathfinderなど、D20システムを楽しむイベントです。<br>
           </p>
-          <div class="d-flex justify-center align-center ga-4 my-4">
+          <div class="d-flex flex-column flex-sm-row justify-center align-center ga-2 ga-sm-4 my-4 button-container">
             <UtilPhase>
               <template v-for="k in ['GM1', 'GM2']" :key="k" v-slot:[k]>
                 <v-btn
@@ -26,6 +26,7 @@
                   append-icon="mdi-chevron-right"
                   to="/about#dmRecruit"
                   :style="{ '--v-activated-opacity': 0 }"
+                  class="button-item"
                 >GM応募案内</v-btn>
               </template>
               <template v-for="k in ['PL1', 'PL2']" :key="k" v-slot:[k]>
@@ -36,6 +37,7 @@
                   append-icon="mdi-chevron-right"
                   to="/about#plRecruit"
                   :style="{ '--v-activated-opacity': 0 }"
+                  class="button-item"
                 >PL応募詳細</v-btn>
               </template>
             </UtilPhase>
@@ -46,6 +48,7 @@
               elevation="0"
               :to="{ hash: '#schedule' }"
               :style="{ '--v-activated-opacity': 0, 'background': '#fff' }"
+              class="button-item"
             >スケジュール</v-btn>
           </div>
         </div>
@@ -200,6 +203,21 @@ useSeoMeta({
 </script>
 
 <style lang="scss" scoped>
+// ボタンコンテナのレスポンシブ対応
+.button-container {
+  width: 100%;
+
+  .button-item {
+    // モバイル: 全幅
+    width: 100%;
+
+    // タブレット以上: 自動幅
+    @media (min-width: 600px) {
+      width: auto;
+    }
+  }
+}
+
 .google-map {
   position: relative;
   width: 100%;
@@ -209,8 +227,8 @@ useSeoMeta({
 
 .google-map iframe {
   position: absolute;
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
 }

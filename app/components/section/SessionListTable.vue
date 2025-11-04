@@ -6,13 +6,15 @@
         v-text="'予定されているセッションはありません'"
       />
     </template>
-    <v-data-table
-      v-else
-      :items="items"
-      :headers="headers"
-      hide-default-footer
-      density="compact"
-    >
+    <!-- モバイル用: 横スクロール可能なコンテナ -->
+    <div class="table-scroll-container">
+      <v-data-table
+        v-if="items.length > 0"
+        :items="items"
+        :headers="headers"
+        hide-default-footer
+        density="compact"
+      >
       <template v-slot:headers="{ columns }">
         <tr>
           <template v-for="column in columns" :key="column.key">
@@ -47,7 +49,8 @@
           <td :style="{ 'width': '80px' }" v-text="item.session_number" />
         </tr>
       </template>
-    </v-data-table>
+      </v-data-table>
+    </div>
   </div>
 </template>
 
@@ -74,10 +77,25 @@ const headers = [
 
 <style lang="scss" scoped>
 .table-wrapper {
+  width: 100%;
+
+  .table-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; // iOS用のスムーズスクロール
+
+    // モバイルでスクロール可能なことを示唆
+    @media (max-width: 959px) {
+      border: 1px solid rgb(var(--v-theme-divider));
+      border-radius: 8px;
+    }
+  }
+
   :deep(table) {
     border-collapse: collapse;
     border: 1px solid rgb(var(--v-theme-divider));
     border-radius: 8px;
+    min-width: 600px; // モバイルで横スクロール
   }
 
   :deep(table thead th) {
@@ -87,10 +105,12 @@ const headers = [
     font-weight: bold;
     height: 30px;
     padding: 0 4px !important;
+    white-space: nowrap;
   }
 
   :deep(table tbody td) {
     border: 1px solid rgb(var(--v-theme-divider));
+    padding: 8px 4px !important;
   }
 
   :deep(.v-data-table-header__content) {
