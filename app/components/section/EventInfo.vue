@@ -6,24 +6,24 @@
       {
         icon: 'mdi-calendar-month-outline',
         title: '開催日時',
-        mainText: '2026年5月23日(土)・5月24日(日) 10:00〜19:00',
+        mainText: '2026年5月30日(土)・5月31日(日) 10:00〜19:00',
         subText: '開場 9:30／開会式 10:00／閉会式 18:20'
       },
       {
         icon: 'mdi-map-marker-outline',
         title: '会場',
-        mainText: 'エル・パーク仙台 ギャラリーホール',
-        subText: '宮城県仙台市青葉区一番町4-11-1\n141ビル（仙台三越定禅寺通り館）6階',
+        mainText: '東京エレクトロンホール宮城\n会議室棟 601・602会議室',
+        subText: '宮城県仙台市青葉区国分町3-3-7',
       },
       {
         icon: 'mdi-train',
         title: 'アクセス',
-        mainText: '仙台市営地下鉄南北線「勾当台公園駅」下車\n（「公園出口2」より徒歩2分）',
+        mainText: '仙台市営地下鉄南北線「勾当台公園駅」下車\n（「公園出口2」より徒歩5分）',
       },
       {
         icon: 'mdi-currency-jpy',
         title: '参加費',
-        mainText: 'DM・GM参加 &yen;0 ／ 一般 &yen;1,500 ／ 学生 &yen;1000',
+        mainText: 'DM・GM参加 &yen;0 ／ 一般 &yen;1,000 ／ 学生 &yen;500',
       }
     ]" :key="i">
       <UiMultiLineTextWithIcon

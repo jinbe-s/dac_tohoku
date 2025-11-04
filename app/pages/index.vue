@@ -13,7 +13,7 @@
             <strong>DAC TOHOKU 2026</strong>
           </h1>
           <p class="my-0 text-textSecondary">
-            DAC TOHOKUは年に一度、宮城県仙台市で開催するTRPGコンベンションです。<br>
+            DAC TOHOKUは宮城県仙台市で開催するTRPGコンベンションです。<br>
             D&D(ダンジョンズ&ドラゴンズ)やpathfinderなど、D20システムを楽しむイベントです。<br>
           </p>
           <div class="d-flex flex-column flex-sm-row justify-center align-center ga-2 ga-sm-4 my-4 button-container">
@@ -114,8 +114,8 @@
     <v-row>
       <template v-for="(item, i) in [
         { title: 'GM/DM参加', price: '0', text: 'イベント参加費は不要' },
-        { title: 'PL一般参加', price: '1,500', text: '当日受付で支払い' },
-        { title: 'PL学生参加', price: '1000', text: '要学生証提示' },
+        { title: 'PL一般参加', price: '1,000', text: '当日受付で支払い' },
+        { title: 'PL学生参加', price: '500', text: '要学生証提示' },
       ]" :key="i">
         <v-col cols="12" sm="4">
           <UiPriceCard
@@ -136,8 +136,7 @@
         <div class="d-flex flex-column ga-2">
           <div class="d-flex flex-column align-start">
             <p class="text-primary font-weight-bold">仙台市内から</p>
-            <p>地下鉄「仙台駅」から泉中央方面に2駅、「<span>勾当台公園駅</span>」下車<br />（「公園出口2」より徒歩2分）</p>
-            <p class="text-body-2 text-textSecondary">※会場HPには南1番出口から地下道で直結と記載がありますが、午前10:00以前は使用不可のため一度地上に出るルートをおすすめします</p>
+            <p>地下鉄「仙台駅」から泉中央方面に2駅、「<span>勾当台公園駅</span>」下車<br />（「公園出口2」より徒歩5分）</p>
           </div>
           <div class="d-flex flex-column align-start">
             <p class="text-primary font-weight-bold">JRから</p>
@@ -160,7 +159,7 @@
         <v-sheet
           class="google-map border-md rounded-md"
         >
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.594739501411!2d140.86850477583928!3d38.26570417186577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a282561eddbd9%3A0xf3e5a6b08ed7e097!2z44Ko44Or44O744OR44O844Kv5LuZ5Y-w!5e0!3m2!1sja!2sjp!4v1755742086689!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1355.087202225877!2d140.86705721101046!3d38.26602494166104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a2830275eadc5%3A0xf6eb0b18d68b0a3a!2z5p2x5Lqs44Ko44Os44Kv44OI44Ot44Oz44Ob44O844Or5a6u5Z-O!5e0!3m2!1sja!2sjp!4v1762265089880!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </v-sheet>
       </v-col>
     </v-row>

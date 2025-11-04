@@ -29,7 +29,7 @@
           </div>
           <div>
             <p class="text-subtitle-1"><strong>【参加費】</strong></p>
-            <p>一般：1,500円、学生：1000円(要学生証提示)</p>
+            <p>一般：1,000円、学生：500円(要学生証提示)</p>
           </div>
           <div>
             <p class="text-subtitle-1"><strong>【応募方法】</strong></p>
