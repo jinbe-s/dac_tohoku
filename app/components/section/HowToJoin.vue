@@ -21,7 +21,8 @@
             rounded="lg"
             elevation="0"
             append-icon="mdi-chevron-right"
-            href="https://google.com"
+            href="https://forms.gle/nMoBzCwsTbZvvxX86"
+            target="_blank"
             :style="{ 'border': '1px solid rgba(255, 255, 255, 0.5)' }"
             v-text="'GM応募する'"
           />
@@ -32,7 +33,8 @@
             rounded="lg"
             elevation="0"
             append-icon="mdi-chevron-right"
-            href="https://google.com"
+            href="https://forms.gle/rBqHxkLat1tfXVjN7"
+            target="_blank"
             :style="{ 'border': '1px solid rgba(255, 255, 255, 0.5)' }"
             v-text="'PL応募する'"
           />
@@ -44,7 +46,8 @@
         rounded="lg"
         elevation="0"
         append-icon="mdi-email-outline"
-        :to="{ hash: '#schedule' }"
+        href="https://forms.gle/qsnHS7LAT7skDzHU9"
+        target="_blank"
         :style="{ '--v-activated-opacity': 0, 'background': '#fff' }"
         v-text="'お問い合わせ'"
       />

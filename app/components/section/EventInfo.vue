@@ -45,7 +45,8 @@
             elevation="0"
             append-icon="mdi-open-in-new"
             class="font-weight-bold"
-            :to="{ hash: '#schedule' }"
+            href="https://forms.gle/uyxbAmmkVR38PJxG6"
+            target="_blank"
             :style="{ '--v-activated-opacity': 0 }"
           ><b>GM応募する</b></v-btn>
         </template>
@@ -57,7 +58,8 @@
             elevation="0"
             append-icon="mdi-open-in-new"
             class="font-weight-bold"
-            :to="{ hash: '#schedule' }"
+            href="https://forms.gle/396KzfaJKVYnSALs9"
+            target="_blank"
             :style="{ '--v-activated-opacity': 0 }"
           ><b>PL応募する</b></v-btn>
         </template>

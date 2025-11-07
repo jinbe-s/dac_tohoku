@@ -37,7 +37,7 @@
             <div class="my-1">
               <p>
                 <a
-                  href=""
+                  href="https://forms.gle/nU7mpR5DHnbA3Sna9"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-decoration-none font-weight-bold"
@@ -88,7 +88,7 @@
             <div class="my-1">
               <p>
                 <a
-                  href=""
+                  href="https://forms.gle/rxGszLAnsHeMkpri6"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-decoration-none font-weight-bold"

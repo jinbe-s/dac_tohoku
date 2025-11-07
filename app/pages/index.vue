@@ -147,7 +147,7 @@
             <p>仙台空港アクセス線でJR「仙台駅」まで25分</p>
           </div>
           <a
-            href="https://maps.app.goo.gl/uA6C7RVe9uDByptR8"
+            href="https://maps.app.goo.gl/XBmroP4LebawcYtw9"
             class="text-decoration-none"
             :style="{ color: 'rgb(var(--v-theme-primary))' }"
             target="_blank"
@@ -172,16 +172,6 @@
         </v-row>
       </template>
     </UtilPhase>
-    <!-- <v-row>
-      <v-col cols="12">
-        <TextMainTitle title="FAQ" section-id="faq" />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
-        テスト
-      </v-col>
-    </v-row> -->
   </v-container>
 </template>
 

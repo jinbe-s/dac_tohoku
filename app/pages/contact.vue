@@ -8,7 +8,7 @@
         color="primary"
         rounded="lg"
         elevation="0"
-        href="https://google.com"
+        href="https://forms.gle/k7JC317qwSvJEhf56"
         target="_blank"
         rel="noopener noreferrer"
         :style="{ 'border': '1px solid rgba(255, 255, 255, 0.5)' }"
