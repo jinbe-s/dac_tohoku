@@ -10,10 +10,10 @@
             color="primary"
           />
           <h1 class="text-h4 text-primary text-center-sm">
-            <strong>DAC TOHOKU 2026</strong>
+            <strong>DAC東北 2026</strong>
           </h1>
           <p class="my-0 text-textSecondary">
-            DAC TOHOKUは宮城県仙台市で開催するTRPGコンベンションです。<br>
+            DAC東北は宮城県仙台市で開催するTRPGコンベンションです。<br>
             D&D(ダンジョンズ&ドラゴンズ)やpathfinderなど、D20システムを楽しむイベントです。<br>
           </p>
           <div class="d-flex flex-column flex-sm-row justify-center align-center ga-2 ga-sm-4 my-4 button-container">

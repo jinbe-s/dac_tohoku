@@ -1,12 +1,12 @@
-# DAC TOHOKU ウェブサイト 仕様書
+# DAC東北 ウェブサイト 仕様書
 
 ## 1. プロジェクト概要
 
 ### 1.1 プロジェクト名
-**DAC TOHOKU** (dac_tohoku)
+**DAC東北** (dac_tohoku)
 
 ### 1.2 目的
-宮城県仙台市で開催されるTRPGコンベンション「DAC TOHOKU」の公式ウェブサイト。D&Dやpathfinderなど、D20システムを楽しむイベントの情報提供とセッション参加者の募集管理を行う。
+宮城県仙台市で開催されるTRPGコンベンション「DAC東北」の公式ウェブサイト。D&Dやpathfinderなど、D20システムを楽しむイベントの情報提供とセッション参加者の募集管理を行う。
 
 ### 1.3 プロジェクトタイプ
 - 静的サイト生成型のウェブアプリケーション
@@ -528,13 +528,13 @@ on:
 ```typescript
 app: {
   head: {
-    titleTemplate: '%s | DAC TOHOKU',
+    titleTemplate: '%s | DAC東北',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       // OGP設定
       { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'DAC TOHOKU' },
+      { property: 'og:site_name', content: 'DAC東北' },
       // Twitter Card設定
       { name: 'twitter:card', content: 'summary_large_image' },
     ]
@@ -816,4 +816,4 @@ yarn dev
 
 ---
 
-**以上、DAC TOHOKU ウェブサイト仕様書**
+**以上、DAC東北 ウェブサイト仕様書**

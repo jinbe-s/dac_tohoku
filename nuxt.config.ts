@@ -46,14 +46,14 @@ export default defineNuxtConfig({
   vite: { ssr: { noExternal: ['vuetify'] } },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://dac-tohoku.com',
-    name: process.env.NUXT_PUBLIC_SITE_NAME || 'DAC TOHOKU',
+    name: process.env.NUXT_PUBLIC_SITE_NAME || 'DAC東北',
     description: process.env.NUXT_PUBLIC_SITE_DESCRIPTION || '宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション'
   },
   compatibilityDate: '2025-08-16',
   runtimeConfig: {
     apiBase: process.env.NUXT_API_BASE || '',
     public: {
-      siteName: process.env.NUXT_PUBLIC_SITE_NAME || 'DAC TOHOKU',
+      siteName: process.env.NUXT_PUBLIC_SITE_NAME || 'DAC東北',
       siteDescription: process.env.NUXT_PUBLIC_SITE_DESCRIPTION || '宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://dac-tohoku.com',
       base: process.env.NUXT_PUBLIC_BASE || '/',

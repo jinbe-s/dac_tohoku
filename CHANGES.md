@@ -18,7 +18,7 @@ GitHub Pagesでの公開と独自ドメイン (dac-tohoku.com) への移行に�
 
 #### 1.1 サイト情報の一元管理
 **問題点:**
-- サイト名「DAC TOHOKU」が複数箇所にハードコーディング
+- サイト名「DAC東北」が複数箇所にハードコーディング
 - サイトURL「dac-tohoku.com」が複数の設定ファイルに分散
 - メタタグ設定が `nuxt.config.ts` と `head-defaults.ts` で重複
 
@@ -169,8 +169,8 @@ GitHub Pagesでの公開と独自ドメイン (dac-tohoku.com) への移行に�
 ### ローカル開発環境
 `.env` ファイルを作成して以下を設定：
 ```env
-NUXT_PUBLIC_SITE_NAME="DAC TOHOKU"
-NUXT_PUBLIC_SITE_DESCRIPTION="宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション「DAC TOHOKU」のホームページです。"
+NUXT_PUBLIC_SITE_NAME="DAC東北"
+NUXT_PUBLIC_SITE_DESCRIPTION="宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション「DAC東北」のホームページです。"
 NUXT_PUBLIC_SITE_URL="https://dac-tohoku.com"
 NUXT_PUBLIC_BASE="/"
 ```
@@ -180,7 +180,7 @@ GitHubリポジトリの「Settings」→「Secrets and variables」→「Action
 
 **独自ドメインで公開する場合:**
 ```
-NUXT_PUBLIC_SITE_NAME=DAC TOHOKU
+NUXT_PUBLIC_SITE_NAME=DAC東北
 NUXT_PUBLIC_SITE_DESCRIPTION=宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション
 NUXT_PUBLIC_SITE_URL=https://dac-tohoku.com
 NUXT_PUBLIC_BASE=/
@@ -189,7 +189,7 @@ NUXT_PUBLIC_INDEXABLE=true
 
 **GitHub Pages URLで公開する場合 (yourname.github.io/dac_tohoku/):**
 ```
-NUXT_PUBLIC_SITE_NAME=DAC TOHOKU
+NUXT_PUBLIC_SITE_NAME=DAC東北
 NUXT_PUBLIC_SITE_DESCRIPTION=宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション
 NUXT_PUBLIC_SITE_URL=https://yourname.github.io/dac_tohoku
 NUXT_PUBLIC_BASE=/dac_tohoku/

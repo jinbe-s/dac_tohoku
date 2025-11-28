@@ -140,7 +140,7 @@ const navItems = [
 **実装内容:**
 ```vue
 <p class="font-weight-bold text-h6 text-sm-h5 text-center px-2">
-  DAC TOHOKUについての質問・連絡は下記Googleフォーム
+  DAC東北についての質問・連絡は下記Googleフォーム
   <br class="d-none d-sm-inline">
   または公式X(旧Twitter)アカウントのリプライ・DMにてお願いします。
 </p>
@@ -318,7 +318,7 @@ const navItems = [
 
 ## まとめ
 
-この改善により、DAC TOHOKUウェブサイトはスマートフォン・タブレット・デスクトップのすべてのデバイスで快適に閲覧できるようになりました。
+この改善により、DAC東北ウェブサイトはスマートフォン・タブレット・デスクトップのすべてのデバイスで快適に閲覧できるようになりました。
 
 **主な改善点:**
 1. ✅ ハンバーガーメニューの実装（モバイル対応）

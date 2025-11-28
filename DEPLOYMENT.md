@@ -1,7 +1,7 @@
 # デプロイ手順書
 
 ## 概要
-このドキュメントでは、DAC TOHOKUウェブサイトをGitHub Pagesで公開する手順を説明します。
+このドキュメントでは、DAC東北ウェブサイトをGitHub Pagesで公開する手順を説明します。
 
 ---
 
@@ -17,7 +17,7 @@
 
 | 変数名 | 説明 | 例 |
 |-------|------|-----|
-| `NUXT_PUBLIC_SITE_NAME` | サイト名 | `DAC TOHOKU` |
+| `NUXT_PUBLIC_SITE_NAME` | サイト名 | `DAC東北` |
 | `NUXT_PUBLIC_SITE_DESCRIPTION` | サイト説明 | `宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション` |
 | `NUXT_PUBLIC_SITE_URL` | サイトURL | `https://dac-tohoku.com` |
 | `NUXT_PUBLIC_BASE` | ベースURL | `/` (独自ドメイン時) または `/dac_tohoku/` (GitHub Pages URL時) |

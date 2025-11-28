@@ -4,8 +4,8 @@
       <v-col cols="12">
         <TextMainTitle title="Discord導入の案内" section-id="discord" />
         <div class="mt-2">
-          <p>DAC TOHOKUでは、当日までの各種連絡や卓ごとの相談をDiscordにて行います。</p>
-          <p>DAC TOHOKUへのDM/GM応募・PL応募をお考えの方、D20システムやTRPGに興味がある方のご参加をお待ちしております。</p>
+          <p>DAC東北では、当日までの各種連絡や卓ごとの相談をDiscordにて行います。</p>
+          <p>DAC東北へのDM/GM応募・PL応募をお考えの方、D20システムやTRPGに興味がある方のご参加をお待ちしております。</p>
           <p class="mt-2">
             <a
               href=""
@@ -13,7 +13,7 @@
               rel="noopener noreferrer"
               class="text-decoration-none font-weight-bold"
               :style="{ color: primary }"
-            >「DAC TOHOKU 2026」専用Discordサーバーに参加する</a>
+            >「DAC東北 2026」専用Discordサーバーに参加する</a>
           </p>
         </div>
       </v-col>
@@ -43,7 +43,7 @@
                   class="text-decoration-none font-weight-bold"
                   :style="{ color: primary }"
                 >
-                  ［DAC TOHOKU 2026 PL応募フォーム］
+                  ［DAC東北 2026 PL応募フォーム］
                 </a>
               </p>
               <p class="text-body-2">※外部のページ(Googleフォーム)が開きます</p>
@@ -59,12 +59,12 @@
           <div>
             <p class="text-subtitle-1"><strong>【当日について】</strong></p>
             <p>交流推進のため、参加中はネックパスの着用をお願いします。</p>
-            <p class="font-weight-bold">協力的な卓への参加ができない方はPL応募を控えるようにお願いいたします。<br />DAC TOHOKUにおいて人間関係のトラブルや同類のトラブルが発生した場合、DM/GMまたはスタッフの権限において途中退席および今後の参加をお断りする場合があります。<br />予めご了承ください。</p>
+            <p class="font-weight-bold">協力的な卓への参加ができない方はPL応募を控えるようにお願いいたします。<br />DAC東北において人間関係のトラブルや同類のトラブルが発生した場合、DM/GMまたはスタッフの権限において途中退席および今後の参加をお断りする場合があります。<br />予めご了承ください。</p>
           </div>
           <div>
             <p class="text-subtitle-1"><strong>【連絡先メールアドレス】</strong></p>
-            <p>DAC TOHOKU運営へのお問い合わせはメニューのお問い合わせフォームまたはDiscordまでお問い合わせください。</p>
-            <p>DAC TOHOKUへメールでお問い合わせ頂く場合は<span class="font-weight-bold" :style="{ color: primary }">dac.tohoku.d20@gmail.com</span>までお問い合わせください。</p>
+            <p>DAC東北運営へのお問い合わせはメニューのお問い合わせフォームまたはDiscordまでお問い合わせください。</p>
+            <p>DAC東北へメールでお問い合わせ頂く場合は<span class="font-weight-bold" :style="{ color: primary }">dac.tohoku.d20@gmail.com</span>までお問い合わせください。</p>
           </div>
         </div>
       </v-col>
@@ -94,7 +94,7 @@
                   class="text-decoration-none font-weight-bold"
                   :style="{ color: primary }"
                 >
-                  ［DAC TOHOKU 2026 DM/GM応募フォーム］
+                  ［DAC東北 2026 DM/GM応募フォーム］
                 </a>
               </p>
               <p class="text-body-2">※外部のページ(Googleフォーム)が開きます</p>
@@ -109,8 +109,8 @@
           </div>
           <div>
             <p class="text-subtitle-1"><strong>【連絡先メールアドレス】</strong></p>
-            <p>DAC TOHOKU運営へのお問い合わせはメニューのお問い合わせフォームまたはDiscordまでお問い合わせください。</p>
-            <p>DAC TOHOKUへメールでお問い合わせ頂く場合は<span class="font-weight-bold" :style="{ color: primary }">dac.tohoku.d20@gmail.com</span>までお問い合わせください。</p>
+            <p>DAC東北運営へのお問い合わせはメニューのお問い合わせフォームまたはDiscordまでお問い合わせください。</p>
+            <p>DAC東北へメールでお問い合わせ頂く場合は<span class="font-weight-bold" :style="{ color: primary }">dac.tohoku.d20@gmail.com</span>までお問い合わせください。</p>
           </div>
         </div>
       </v-col>
