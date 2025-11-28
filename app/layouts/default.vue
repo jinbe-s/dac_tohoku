@@ -84,9 +84,10 @@ const navItems = [
 	{ label: '過去の開催', href: 'https://dac.10yearsafter.info/' }
 ] as Array<{ label: string; to?: RouteLocationRaw; href?: string }>
 
+const config = useRuntimeConfig()
 useHead({
 	link: [
-		{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+		{ rel: 'icon', type: 'image/x-icon', href: `${config.public.base}favicon.ico` }
 	]
 })
 </script>

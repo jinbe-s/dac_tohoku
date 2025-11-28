@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     baseURL: process.env.NUXT_PUBLIC_BASE || '/',
     head: {
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        { rel: 'icon', type: 'image/x-icon', href: `${process.env.NUXT_PUBLIC_BASE || '/'}favicon.ico` }
       ]
     }
   },
