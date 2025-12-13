@@ -27,7 +27,7 @@
           class="text-body-2"
           v-text="`システム：${ item.system_name }`"
         />
-        <div class="d-flex align-center justify-center ga-3 mt-3">
+        <div class="d-flex align-center justify-center ga-3 mt-3 detail-chips-primary">
           <span
             :class="detailChipClass1"
             v-text="`${ item.session_lv }レベル`"
@@ -181,8 +181,27 @@ const detailChipClass2 = 'py-1 px-3 rounded-lg border-sm border-background borde
     margin-top: 8px !important;
   }
 
+  .detail-chips-primary {
+    flex-wrap: wrap;
+    gap: 8px !important;
+  }
+
+  .detail-chips-primary span {
+    font-size: 0.875rem !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
   .session-tendency span {
-    min-width: 175px;
+    min-width: 140px;
+    font-size: 0.875rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .session-tendency span {
+    min-width: 130px;
+    font-size: 0.75rem !important;
   }
 }
 </style>
