@@ -20,25 +20,25 @@
             <UtilPhase>
               <template v-for="k in ['GM1', 'GM2']" :key="k" v-slot:[k]>
                 <v-btn
-                  color="primary"
+                  size="large"
+                  color="accent"
                   rounded="lg"
-                  elevation="0"
+                  elevation="2"
                   append-icon="mdi-chevron-right"
                   to="/about#dmRecruit"
-                  :style="{ '--v-activated-opacity': 0 }"
-                  class="button-item"
-                >GM応募案内</v-btn>
+                  class="button-item font-weight-bold"
+                >DM/GM応募案内</v-btn>
               </template>
               <template v-for="k in ['PL1', 'PL2']" :key="k" v-slot:[k]>
                 <v-btn
-                  color="primary"
+                  size="large"
+                  color="accent"
                   rounded="lg"
-                  elevation="0"
+                  elevation="2"
                   append-icon="mdi-chevron-right"
                   to="/about#plRecruit"
-                  :style="{ '--v-activated-opacity': 0 }"
-                  class="button-item"
-                >PL応募詳細</v-btn>
+                  class="button-item font-weight-bold"
+                >PL応募案内</v-btn>
               </template>
             </UtilPhase>
             <v-btn
@@ -47,7 +47,7 @@
               rounded="lg"
               elevation="0"
               :to="{ hash: '#schedule' }"
-              :style="{ '--v-activated-opacity': 0, 'background': '#fff' }"
+              :style="{ 'background': '#fff' }"
               class="button-item"
             >スケジュール</v-btn>
           </div>
@@ -164,15 +164,6 @@
         </v-sheet>
       </v-col>
     </v-row>
-    <UtilPhase>
-      <template v-for="k in ['GM1', 'GM2', 'PL1', 'PL2']" :key="k" v-slot:[k]>
-        <v-row>
-          <v-col cols="12">
-            <SectionHowToJoin />
-          </v-col>
-        </v-row>
-      </template>
-    </UtilPhase>
   </v-container>
 </template>
 

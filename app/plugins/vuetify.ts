@@ -19,7 +19,11 @@ export default defineNuxtPlugin((nuxtApp) => {
             // Brand
             primary: '#1E88E5',
             secondary: '#42A5A5',
-            accent: '#FFB300',
+            accent: '#F57C00', // Material Design Orange 700 - より濃く、白テキストと十分なコントラスト
+            // On Colors (text on colored backgrounds)
+            'on-primary': '#FFFFFF',
+            'on-secondary': '#FFFFFF',
+            'on-accent': '#FFFFFF',
             // Feedback
             success: '#2E7D32',
             warning: '#FB8C00',
@@ -41,6 +45,10 @@ export default defineNuxtPlugin((nuxtApp) => {
             primary: '#90CAF9',
             secondary: '#B39DDB',
             accent: '#26C6DA',
+            // On Colors (text on colored backgrounds)
+            'on-primary': '#000000',
+            'on-secondary': '#000000',
+            'on-accent': '#000000',
             // Feedback
             success: '#66BB6A',
             warning: '#FFA726',

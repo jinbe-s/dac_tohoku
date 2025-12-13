@@ -40,35 +40,26 @@
         <template v-for="k in ['GM1', 'GM2']" :key="i" v-slot:[k]>
           <v-btn
             block
-            color="accent"
+            color="primary"
+            variant="outlined"
             rounded="lg"
             elevation="0"
-            append-icon="mdi-open-in-new"
-            class="font-weight-bold"
-            href="https://forms.gle/uyxbAmmkVR38PJxG6"
-            target="_blank"
-            :style="{ '--v-activated-opacity': 0 }"
-          ><b>GM応募する</b></v-btn>
+            append-icon="mdi-chevron-right"
+            to="/about#dmRecruit"
+          >DM/GM応募案内</v-btn>
         </template>
         <template v-for="k in ['PL1', 'PL2']" :key="i" v-slot:[k]>
           <v-btn
             block
-            color="accent"
+            color="primary"
+            variant="outlined"
             rounded="lg"
             elevation="0"
-            append-icon="mdi-open-in-new"
-            class="font-weight-bold"
-            href="https://forms.gle/396KzfaJKVYnSALs9"
-            target="_blank"
-            :style="{ '--v-activated-opacity': 0 }"
-          ><b>PL応募する</b></v-btn>
+            append-icon="mdi-chevron-right"
+            to="/about#plRecruit"
+          >PL応募案内</v-btn>
         </template>
       </UtilPhase>
-      <p
-        v-if="isEventPhaseActive.length"
-        class="mt-1 text-textSecondary text-body-2 text-center"
-        v-text="'※外部フォームに移動します'"
-      />
     </div>
   </v-sheet>
 </template>
@@ -76,6 +67,3 @@
 <script lang="ts" setup>
 const { isEventPhaseActive } = useEventPhase()
 </script>
-
-<style scoped>
-</style>

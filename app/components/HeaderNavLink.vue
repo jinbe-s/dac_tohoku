@@ -6,9 +6,8 @@
       <NuxtLink
         v-if="item.to"
         :to="item.to"
-        class="text-decoration-none"
+        class="nav-link text-decoration-none"
         :class="i > 0 ? gapClass : ''"
-        :style="{ color: onPrimary }"
       >
         {{ item.label }}
       </NuxtLink>
@@ -17,9 +16,8 @@
       <a
         v-else-if="item.href"
         :href="item.href"
-        class="text-decoration-none"
+        class="nav-link text-decoration-none"
         :class="i > 0 ? gapClass : ''"
-        :style="{ color: onPrimary }"
         target="_blank"
         rel="noopener"
       >
@@ -36,6 +34,33 @@ const props = withDefaults(defineProps<{
   items: Array<{ label: string; to?: RouteLocationRaw; href?: string }>
   gapClass?: string
 }>(), { gapClass: '' })
-
-const onPrimary = 'rgb(var(--v-theme-on-primary))'
 </script>
+
+<style scoped>
+.nav-link {
+  color: rgb(var(--v-theme-on-primary));
+  padding: 8px 12px;
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.router-link-active {
+  font-weight: 600;
+}
+
+.nav-link.router-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
+  height: 3px;
+  background-color: rgb(var(--v-theme-accent));
+  border-radius: 2px 2px 0 0;
+}
+</style>

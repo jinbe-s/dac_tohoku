@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="pa-4 rounded-lg d-flex flex-wrap align-center"
+    class="pa-4 rounded-lg d-flex flex-column align-start"
     color="info"
     id="howToJoin"
   >
@@ -13,67 +13,26 @@
         <p v-text="'後日、参加確定後に専用discordに参加'" />
       </div>
     </div>
-    <div class="d-flex flex-item align-center ga-4 my-4">
+    <div class="mt-4">
       <UtilPhase>
-        <template v-for="k in ['GM1', 'GM2']" :key="i" v-slot:[k]>
-          <v-btn
-            color="primary"
-            rounded="lg"
-            elevation="0"
-            append-icon="mdi-chevron-right"
-            href="https://forms.gle/nMoBzCwsTbZvvxX86"
-            target="_blank"
-            :style="{ 'border': '1px solid rgba(255, 255, 255, 0.5)' }"
-            v-text="'GM応募する'"
-          />
+        <template v-for="k in ['GM1', 'GM2']" :key="k" v-slot:[k]>
+          <p class="text-body-1">
+            詳しくは
+            <NuxtLink to="/about#dmRecruit" class="font-weight-bold text-decoration-underline">GM応募案内ページ</NuxtLink>
+            をご覧ください
+          </p>
         </template>
-        <template v-for="k in ['PL1', 'PL2']" :key="i" v-slot:[k]>
-          <v-btn
-            color="primary"
-            rounded="lg"
-            elevation="0"
-            append-icon="mdi-chevron-right"
-            href="https://forms.gle/rBqHxkLat1tfXVjN7"
-            target="_blank"
-            :style="{ 'border': '1px solid rgba(255, 255, 255, 0.5)' }"
-            v-text="'PL応募する'"
-          />
+        <template v-for="k in ['PL1', 'PL2']" :key="k" v-slot:[k]>
+          <p class="text-body-1">
+            詳しくは
+            <NuxtLink to="/about#plRecruit" class="font-weight-bold text-decoration-underline">PL応募案内ページ</NuxtLink>
+            をご覧ください
+          </p>
         </template>
       </UtilPhase>
-      <v-btn
-        color="primary"
-        variant="outlined"
-        rounded="lg"
-        elevation="0"
-        append-icon="mdi-email-outline"
-        href="https://forms.gle/qsnHS7LAT7skDzHU9"
-        target="_blank"
-        :style="{ '--v-activated-opacity': 0, 'background': '#fff' }"
-        v-text="'お問い合わせ'"
-      />
     </div>
   </v-sheet>
 </template>
 
 <script lang="ts" setup>
-
 </script>
-
-<style lang="scss" scoped>
-.flex-wrap {
-  justify-content: space-between;
-
-  @media (max-width: 959px) {
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-
-.flex-item {
-  justify-content: center;
-
-  @media (max-width: 959px) {
-    flex-direction: column;
-  }
-}
-</style>
