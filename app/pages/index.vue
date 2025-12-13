@@ -77,14 +77,15 @@
     </v-row>
     <v-row>
       <v-col cols="12" md="6">
-        <TextSubTitle title="開催日まで" />
+        <TextSubTitle title="開催日まで(予定)" />
         <SectionScheduleList
           class="mt-3"
           :items="[
-            { name: '2/7(土)', title: 'GMエントリー開始' },
-            { name: '2/23(月祝)', title: 'GMエントリー終了(予定)' },
-            { name: '3月前半', title: 'プレイヤー募集開始予定' },
-            { name: '4月前半', title: '卓分け発表'},
+            { name: '2026/1/17(土)', title: 'GMエントリー開始' },
+            { name: '2026/2/15(日)', title: 'GMエントリー終了' },
+            { name: '2026/2/23(月祝)', title: 'プレイヤー募集開始' },
+            { name: '2026/3/22(日)', title: 'プレイヤー募集終了'},
+            { name: '2026/3月後半〜4月頭', title: '卓分け発表' }
           ]"
         />
       </v-col>
