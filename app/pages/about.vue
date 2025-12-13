@@ -111,6 +111,24 @@
         </v-row>
       </template>
     </UtilPhase>
+    <UtilPhase>
+      <template v-for="k in ['GM1', 'GM2', 'PL1', 'PL2']" :key="k" v-slot:[k]>
+        <v-row>
+          <v-col cols="12">
+            <TextMainTitle title="懇親会について" section-id="party" />
+            <div class="mt-3 text-body d-flex flex-column ga-2">
+              <p>「DAC東北 2026」各日のコンベンション終了後、会場付近の飲食店にて懇親会を開催いたします（参加任意、参加費別途）。</p>
+
+              <p>時間：19:30〜21:30予定（途中退出可能）<br>参加費：一般5,000円・学生2,500円（当日受付時に合わせて頂戴します）</p>
+
+              <p>両日とも、コース料理・飲み放題付き・お酒の持ち込み可能な会場を予定しています。<br>アルコールが提供される場となりますので、未成年の方やハンドルキーパーの方など注意が必要な方が懇親会への参加を希望される場合にはご留意ください。</p>
+
+              <p>会場の詳細および参加方法については別途参加者向けに案内予定のDiscordにてご案内いたします。</p>
+            </div>
+          </v-col>
+        </v-row>
+      </template>
+    </UtilPhase>
   </v-container>
 </template>
 
