@@ -22,8 +22,30 @@ const twRoot = ref<HTMLElement | null>(null)
 import { useTheme } from 'vuetify'
 const isDark = computed(() => useTheme().global.current.value.dark)
 
+const loadTwitterTimeline = () => {
+  const twttr = (window as any).twttr
+  if (twttr?.widgets) {
+    twttr.widgets.load(twRoot.value || undefined)
+  } else {
+    console.warn('Twitter widgets not loaded yet, retrying...')
+    // 最大5回リトライ
+    let retryCount = 0
+    const retryInterval = setInterval(() => {
+      retryCount++
+      const twttr = (window as any).twttr
+      if (twttr?.widgets) {
+        twttr.widgets.load(twRoot.value || undefined)
+        clearInterval(retryInterval)
+      } else if (retryCount >= 5) {
+        console.error('Failed to load Twitter widgets after 5 retries')
+        clearInterval(retryInterval)
+      }
+    }, 500)
+  }
+}
+
 onMounted(() => {
-  (window as any)?.twttr?.widgets?.load?.(twRoot.value || undefined)
+  loadTwitterTimeline()
 })
 </script>
 
