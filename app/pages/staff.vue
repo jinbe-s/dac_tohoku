@@ -5,9 +5,8 @@
         <TextMainTitle title="スタッフ一覧" section-id="staffList" />
         <div class="mt-3 text-body d-flex flex-column ga-2">
           <p>代表：さいとう</p>
-          <p>副代表：しず</p>
-          <p>全般補助：フェケ</p>
-          <p>WEB制作：さいとう</p>
+          <p>副代表：シズ、フェケ</p>
+          <p>少人数のため、その他様々な方からお手伝い・助言をいただきながら運営しています。</p>
         </div>
       </v-col>
     </v-row>
@@ -15,7 +14,9 @@
       <v-col cols="12">
         <TextMainTitle title="運営体制" section-id="system" />
         <div class="mt-3 text-body d-flex flex-column ga-2">
-          <p>現在作成中...</p>
+          <p>さいとう（全体統括・WEB関連）</p>
+          <p>フェケ（実務全般）</p>
+          <p>シズ（運営助言・連携）</p>
         </div>
       </v-col>
     </v-row>

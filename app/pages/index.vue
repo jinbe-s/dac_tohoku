@@ -67,7 +67,7 @@
         <SectionNewInfo />
       </v-col>
       <v-col cols="12" md="6">
-        <LazySectionTwitterTimeline />
+        <SectionTwitterTimeline />
       </v-col>
     </v-row>
     <v-row>
