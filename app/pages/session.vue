@@ -72,8 +72,10 @@ const day1List = computed(() => allList.value.filter(r => r.day_1 === 1))
 const day2List = computed(() => allList.value.filter(r => r.day_2 === 1))
 const wList = computed(() => allList.value.filter(r => r.both === 1))
 
-useSeoMeta({
-  title: '卓一覧',
+useSiteMeta({
+  title: 'セッション一覧・卓情報',
+  description: 'DAC東北 2026のセッション一覧。5月23日・24日開催の卓情報。両日参加可能な卓も掲載。GM情報、参加人数、レベル、システム、シナリオ概要。',
+  keywords: 'DAC東北,セッション,卓一覧,GM,シナリオ,参加人数,5月23日,5月24日'
 })
 </script>
 
