@@ -49,8 +49,10 @@
 <script lang="ts" setup>
 import { TextMainTitle } from '#components';
 
-useSeoMeta({
-  title: 'スタッフ/過去の開催',
+useSiteMeta({
+  title: 'スタッフ紹介と過去の開催情報',
+  description: 'DAC東北のスタッフ紹介と運営体制。代表さいとう、副代表シズ・フェケ。スタッフ募集中。2024年以前のイベントは旧サイトを参照。',
+  keywords: 'DAC東北,スタッフ,運営,代表,スタッフ募集,過去の開催'
 })
 </script>
 

@@ -26,8 +26,10 @@
 </template>
 
 <script lang="ts" setup>
-useSeoMeta({
+useSiteMeta({
   title: 'お問い合わせ',
+  description: 'DAC東北への問い合わせ。Googleフォーム、X（Twitter）DMでのお問い合わせ受付。公式アカウント @dac_tohoku。イベントに関する質問・連絡はこちらから。',
+  keywords: 'DAC東北,お問い合わせ,連絡先,Twitter,DM,問い合わせフォーム'
 })
 </script>
 

@@ -137,8 +137,10 @@
 <script setup lang="ts">
 import { FORM_URLS } from '~/config/forms'
 
-useSeoMeta({
-  title: '参加案内',
+useSiteMeta({
+  title: '参加方法・エントリー受付',
+  description: 'DAC東北 2026への参加方法。GM/DM募集（1月17日〜2月15日）、プレイヤー募集（2月23日〜3月22日）。参加費、エントリー方法、懇親会情報を掲載。',
+  keywords: 'DAC東北,参加方法,GM募集,DM募集,PL募集,エントリー,応募,懇親会'
 })
 
 const primary = 'rgb(var(--v-theme-primary))'
