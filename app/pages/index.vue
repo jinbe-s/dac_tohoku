@@ -1,4 +1,9 @@
 <template>
+  <!-- Event JSON-LD Schema -->
+  <UtilJsonLd :json-ld="eventSchema" />
+  <!-- Organization JSON-LD Schema -->
+  <UtilJsonLd :json-ld="organizationSchema" />
+
   <v-container class="py-10">
     <v-row>
       <v-col cols="12" md="6">
@@ -178,9 +183,75 @@ const phaseText = computed(() => {
   return parts.length ? `${parts.join('・')}応募募集中` : ''
 })
 
-useSeoMeta({
-  title: 'TOP',
+useSiteMeta({
+  title: 'DAC東北 2026 - TRPGコンベンション募集案内',
+  description: 'DAC東北 2026の開催情報。仙台市のTRPGコンベンション。日程、会場、参加費、アクセス、最新情報を掲載。D&D、Pathfinderなど D20システムを楽しむイベント。',
+  keywords: 'DAC東北,TRPG,コンベンション,仙台,D&D,Pathfinder,D20システム,2026'
 })
+
+// Event JSON-LD Schema
+const eventSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'DAC東北 2026',
+  startDate: '2026-05-23T10:00:00+09:00',
+  endDate: '2026-05-24T18:00:00+09:00',
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  location: {
+    '@type': 'Place',
+    name: 'エル・パーク仙台 セミナーホール1・2',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'JP',
+      addressRegion: '宮城県',
+      addressLocality: '仙台市青葉区',
+      streetAddress: '一番町4-11-1',
+      postalCode: '980-0811'
+    }
+  },
+  description: '宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション「DAC東北」。D&D、Pathfinderなどのシステムで様々なセッションをお楽しみいただけます。',
+  organizer: {
+    '@type': 'Organization',
+    name: 'DAC東北',
+    url: 'https://dac-tohoku.com'
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'GM/DM参加',
+      price: '0',
+      priceCurrency: 'JPY',
+      availability: 'https://schema.org/InStock',
+      validFrom: '2026-01-17T00:00:00+09:00'
+    },
+    {
+      '@type': 'Offer',
+      name: 'プレイヤー参加',
+      price: '1000',
+      priceCurrency: 'JPY',
+      availability: 'https://schema.org/InStock',
+      validFrom: '2026-02-23T00:00:00+09:00'
+    }
+  ]
+}
+
+// Organization JSON-LD Schema
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'DAC東北',
+  url: 'https://dac-tohoku.com',
+  logo: 'https://dac-tohoku.com/icon.png',
+  sameAs: [
+    'https://x.com/dac_tohoku'
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'Customer Service',
+    url: 'https://dac-tohoku.com/contact'
+  }
+}
 </script>
 
 <style lang="scss" scoped>
