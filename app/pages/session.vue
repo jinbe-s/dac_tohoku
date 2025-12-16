@@ -1,7 +1,7 @@
 <template>
   <ClientOnly>
     <v-container class="py-10">
-      <template v-if="pending || error">
+      <template v-if="pending || error || allList.length === 0">
         <v-row>
           <v-col cols="12">
             <p class="text-center font-h3 font-weight-bold">卓一覧は準備中です</p>
