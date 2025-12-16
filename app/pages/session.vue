@@ -13,8 +13,8 @@
         <div class="my-3">
           <v-row>
             <template v-for="item in [
-              { title: '5月23日セッション', list: 'day1List', detail: 'day1Detail' },
-              { title: '5月24日セッション', list: 'day2List', detail: 'day2Detail' },
+              { title: '5月30日セッション', list: 'day1List', detail: 'day1Detail' },
+              { title: '5月31日セッション', list: 'day2List', detail: 'day2Detail' },
               { title: '両日卓セッション', list: 'wList', detail: 'wDetail' },
             ]">
               <v-col cols="12" md="4">
@@ -28,8 +28,8 @@
           </v-row>
         </div>
         <template v-for="item in [
-          { title: '5月23日 セッション一覧', items: day1List, sectionId: 'day1List' },
-          { title: '5月24日 セッション一覧', items: day2List, sectionId: 'day2List' },
+          { title: '5月30日 セッション一覧', items: day1List, sectionId: 'day1List' },
+          { title: '5月31日 セッション一覧', items: day2List, sectionId: 'day2List' },
           { title: '両日卓 セッション一覧', items: wList, sectionId: 'wList' },
         ]">
           <v-row>
@@ -43,8 +43,8 @@
           </v-row>
         </template>
         <template v-for="item in [
-          { title: '5月23日 セッション詳細', items: day1List, sectionId: 'day1Detail' },
-          { title: '5月24日 セッション詳細', items: day2List, sectionId: 'day2Detail' },
+          { title: '5月30日 セッション詳細', items: day1List, sectionId: 'day1Detail' },
+          { title: '5月31日 セッション詳細', items: day2List, sectionId: 'day2Detail' },
           { title: '両日卓 セッション詳細', items: wList, sectionId: 'wDetail' },
         ]">
           <v-row>
@@ -74,8 +74,8 @@ const wList = computed(() => allList.value.filter(r => r.both === 1))
 
 useSiteMeta({
   title: 'セッション一覧・卓情報',
-  description: 'DAC東北 2026のセッション一覧。5月23日・24日開催の卓情報。両日参加可能な卓も掲載。GM情報、参加人数、レベル、システム、シナリオ概要。',
-  keywords: 'DAC東北,セッション,卓一覧,GM,シナリオ,参加人数,5月23日,5月24日'
+  description: 'DAC東北 2026のセッション一覧。5月30日・31日開催の卓情報。両日参加可能な卓も掲載。GM情報、参加人数、レベル、システム、シナリオ概要。',
+  keywords: 'DAC東北,セッション,卓一覧,GM,シナリオ,参加人数,5月30日,5月31日'
 })
 </script>
 
