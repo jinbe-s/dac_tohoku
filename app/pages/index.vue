@@ -194,8 +194,8 @@ const eventSchema = {
   '@context': 'https://schema.org',
   '@type': 'Event',
   name: 'DAC東北 2026',
-  startDate: '2026-05-23T10:00:00+09:00',
-  endDate: '2026-05-24T18:00:00+09:00',
+  startDate: '2026-05-30T10:00:00+09:00',
+  endDate: '2026-05-31T18:00:00+09:00',
   eventStatus: 'https://schema.org/EventScheduled',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   location: {
