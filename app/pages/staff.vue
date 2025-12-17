@@ -32,7 +32,7 @@
       <v-col cols="12">
         <text-main-title title="過去の開催" />
         <div class="mt-3 text-body d-flex flex-column ga-2">
-          <p>2024年以前の開催は旧サイトからご確認ください<br>
+          <p>DAC東北2025以前の開催は旧サイトからご確認ください<br>
             <a
               href="https://dac.10yearsafter.info/"
               class="text-decoration-none"
