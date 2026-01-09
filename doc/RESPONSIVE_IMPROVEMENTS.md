@@ -111,7 +111,7 @@ const navItems = [
 <!-- flex-column: モバイルで縦並び -->
 <!-- flex-sm-row: 600px以上で横並び -->
 <div class="d-flex flex-column flex-sm-row justify-center align-center ga-2 ga-sm-4 my-4">
-  <v-btn block>GM応募案内</v-btn>
+  <v-btn block>GM募集要項</v-btn>
   <v-btn block>PL応募詳細</v-btn>
   <v-btn block>スケジュール</v-btn>
 </div>

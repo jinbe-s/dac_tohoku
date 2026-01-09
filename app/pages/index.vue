@@ -32,7 +32,7 @@
                   append-icon="mdi-chevron-right"
                   to="/about#dmRecruit"
                   class="button-item font-weight-bold"
-                >DM/GM応募案内</v-btn>
+                >DM/GM募集要項</v-btn>
               </template>
               <template v-for="k in ['PL1', 'PL2']" :key="k" v-slot:[k]>
                 <v-btn
@@ -43,7 +43,7 @@
                   append-icon="mdi-chevron-right"
                   to="/about#plRecruit"
                   class="button-item font-weight-bold"
-                >PL応募案内</v-btn>
+                >PL募集要項</v-btn>
               </template>
             </UtilPhase>
             <v-btn
@@ -184,7 +184,7 @@ const phaseText = computed(() => {
 })
 
 useSiteMeta({
-  title: 'DAC東北 2026 - TRPGコンベンション募集案内',
+  title: 'DAC東北 2026 - TRPGコンベンション募集要項',
   description: 'DAC東北 2026の開催情報。仙台市のTRPGコンベンション。日程、会場、参加費、アクセス、最新情報を掲載。D&D、Pathfinderなど D20システムを楽しむイベント。',
   keywords: 'DAC東北,TRPG,コンベンション,仙台,D&D,Pathfinder,D20システム,2026'
 })

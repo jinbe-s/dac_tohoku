@@ -46,7 +46,7 @@
             elevation="0"
             append-icon="mdi-chevron-right"
             to="/about#dmRecruit"
-          >DM/GM応募案内</v-btn>
+          >DM/GM募集要項</v-btn>
         </template>
         <template v-for="k in ['PL1', 'PL2']" :key="i" v-slot:[k]>
           <v-btn
@@ -57,7 +57,7 @@
             elevation="0"
             append-icon="mdi-chevron-right"
             to="/about#plRecruit"
-          >PL応募案内</v-btn>
+          >PL募集要項</v-btn>
         </template>
       </UtilPhase>
     </div>

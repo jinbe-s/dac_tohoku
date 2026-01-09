@@ -18,14 +18,14 @@
         <template v-for="k in ['GM1', 'GM2']" :key="k" v-slot:[k]>
           <p class="text-body-1">
             詳しくは
-            <NuxtLink to="/about#dmRecruit" class="font-weight-bold text-decoration-underline">GM応募案内ページ</NuxtLink>
+            <NuxtLink to="/about#dmRecruit" class="font-weight-bold text-decoration-underline">GM募集要項ページ</NuxtLink>
             をご覧ください
           </p>
         </template>
         <template v-for="k in ['PL1', 'PL2']" :key="k" v-slot:[k]>
           <p class="text-body-1">
             詳しくは
-            <NuxtLink to="/about#plRecruit" class="font-weight-bold text-decoration-underline">PL応募案内ページ</NuxtLink>
+            <NuxtLink to="/about#plRecruit" class="font-weight-bold text-decoration-underline">PL募集要項ページ</NuxtLink>
             をご覧ください
           </p>
         </template>
