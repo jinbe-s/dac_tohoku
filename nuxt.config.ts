@@ -7,12 +7,16 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     'nuxt-simple-sitemap',
     '@nuxtjs/seo',
+    'nuxt-gtag',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         config.plugins?.push(vuetify())
       })
     },
   ],
+  gtag: {
+    id: process.env.NUXT_PUBLIC_GTAG_ID || ''
+  },
   nitro: {
     preset: 'github_pages',
     prerender: {

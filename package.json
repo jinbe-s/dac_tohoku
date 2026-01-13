@@ -28,6 +28,7 @@
     "dateformat": "^5.0.3",
     "dompurify": "^3.2.6",
     "nuxt": "^4.0.3",
+    "nuxt-gtag": "^4.1.0",
     "nuxt-simple-sitemap": "^4.4.1",
     "sass": "^1.90.0",
     "vite-plugin-vuetify": "^2.1.2",
