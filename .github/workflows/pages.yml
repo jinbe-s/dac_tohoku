@@ -19,9 +19,9 @@ jobs:
       NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL || 'https://dac-tohoku.com' }}
       NUXT_PUBLIC_BASE: ${{ vars.NUXT_PUBLIC_BASE || '/' }}
       NUXT_PUBLIC_INDEXABLE: ${{ vars.NUXT_PUBLIC_INDEXABLE || 'false' }}
-      NUXT_API_EVENT_DATA: ${{ vars.NUXT_API_EVENT_DATA }}
       NUXT_API_NEW_INFO: ${{ vars.NUXT_API_NEW_INFO }}
       NUXT_API_SESSION_LIST: ${{ vars.NUXT_API_SESSION_LIST }}
+      NUXT_API_SESSION_LIST_2: ${{ vars.NUXT_API_SESSION_LIST_2 }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

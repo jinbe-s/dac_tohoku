@@ -47,7 +47,14 @@ export default defineNuxtConfig({
     '~/assets/css/base.css'
   ],
   build: { transpile: ['vuetify'] },
-  vite: { ssr: { noExternal: ['vuetify'] } },
+  vite: {
+    ssr: { noExternal: ['vuetify'] },
+    server: {
+      fs: {
+        strict: false
+      }
+    }
+  },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://dac-tohoku.com',
     name: process.env.NUXT_PUBLIC_SITE_NAME || 'DAC東北',
@@ -61,9 +68,9 @@ export default defineNuxtConfig({
       siteDescription: process.env.NUXT_PUBLIC_SITE_DESCRIPTION || '宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://dac-tohoku.com',
       base: process.env.NUXT_PUBLIC_BASE || '/',
-      eventData: process.env.NUXT_API_EVENT_DATA || '',
       newInfo: process.env.NUXT_API_NEW_INFO || '',
       sessionList: process.env.NUXT_API_SESSION_LIST || '',
+      sessionList2: process.env.NUXT_API_SESSION_LIST_2 || '',
     }
   }
 })
