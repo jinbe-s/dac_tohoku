@@ -134,6 +134,13 @@
     </v-row>
     <v-row>
       <v-col cols="12">
+        <TextMainTitle title="協賛" section-id="sponsor" />
+        <p class="mt-2 text-body-2 text-textSecondary">プレゼント抽選会の景品をご提供いただいている企業・団体様です。</p>
+      </v-col>
+    </v-row>
+    <SectionSponsorList />
+    <v-row>
+      <v-col cols="12">
         <TextMainTitle title="アクセス" section-id="access" />
       </v-col>
     </v-row>
