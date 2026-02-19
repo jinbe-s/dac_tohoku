@@ -1,5 +1,14 @@
 <template>
   <ClientOnly>
+    <v-btn
+      icon
+      class="scroll-top-btn"
+      color="primary"
+      @click="scrollToTop"
+    >
+      <v-icon>mdi-chevron-up</v-icon>
+    </v-btn>
+
     <v-container class="py-10">
       <template v-if="pending || error || allList.length === 0">
         <v-row>
@@ -64,13 +73,18 @@
 <script lang="ts" setup>
 import type { SessionListResponse } from '~/composables/useSessionList'
 
-const { getSessionList } = useSessionList()
+const route = useRoute()
+const { public: pub } = useRuntimeConfig()
+const previewUrl = route.query.preview === '1' ? pub.sessionList2 : undefined
+const { getSessionList } = useSessionList(previewUrl)
 const { data, pending, error } = await getSessionList()
 
 const allList = computed<SessionListResponse[]>(() => data.value ?? [])
 const day1List = computed(() => allList.value.filter(r => r.day_1 === 1))
 const day2List = computed(() => allList.value.filter(r => r.day_2 === 1))
 const wList = computed(() => allList.value.filter(r => r.both === 1))
+
+const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
 useSiteMeta({
   title: 'セッション一覧・卓情報',
@@ -80,5 +94,11 @@ useSiteMeta({
 </script>
 
 <style lang="scss" scoped>
-
+.scroll-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  border-radius: 4px !important;
+}
 </style>

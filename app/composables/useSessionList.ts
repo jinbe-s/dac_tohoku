@@ -30,9 +30,10 @@ export type SessionListResponse = {
   players?: string[]
 }
 
-export const useSessionList = () => {
+export const useSessionList = (overrideUrl?: string) => {
   const { public: pub } = useRuntimeConfig()
-  const url = pub.sessionList
+  const url = overrideUrl ?? pub.sessionList
+  const key = overrideUrl ? 'sessionListPreview' : 'sessionList'
 
   const getSessionList = () =>
     useFetch<SessionListResponse>(url, {
@@ -43,7 +44,7 @@ export const useSessionList = () => {
       cache: 'no-store',
       headers: { 'cache-control': 'no-cache' },
       retry: 1,
-      key: 'sessionList'
+      key
     })
 
   return { getSessionList }

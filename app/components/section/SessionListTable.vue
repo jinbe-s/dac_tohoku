@@ -43,10 +43,10 @@
               v-text="item.session_name"
             />
           </td>
-          <td :style="{ 'width': '180px' }" v-text="item.dm_name" />
-          <td :style="{ 'width': '70px' }" v-text="item.system_name_short" />
-          <td :style="{ 'width': '80px' }" v-text="item.session_lv" />
-          <td :style="{ 'width': '80px' }" v-text="item.session_number" />
+          <td :style="{ 'width': '180px', 'text-align': 'center' }" v-text="item.dm_name" />
+          <td :style="{ 'width': '70px', 'text-align': 'center' }" v-text="item.system_name_short" />
+          <td :style="{ 'width': '80px', 'text-align': 'center' }" v-text="item.session_lv" />
+          <td :style="{ 'width': '80px', 'text-align': 'center' }" v-text="item.session_number" />
         </tr>
       </template>
       </v-data-table>
