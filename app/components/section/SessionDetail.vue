@@ -17,7 +17,7 @@
       >
         <p
           class="text-h6"
-          v-text="`${ item.session_name }`"
+          v-text="`${ item.table_id }：「${ item.session_name }」`"
         />
         <p
           class="text-body-2"
