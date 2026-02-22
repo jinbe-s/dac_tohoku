@@ -86,7 +86,7 @@
         <SectionScheduleList
           class="mt-3"
           :items="[
-            { name: '2026/1/17(土)', title: 'GMエントリー開始' },
+            // { name: '2026/1/17(土)', title: 'GMエントリー開始' },
             { name: '2026/2/15(日)', title: 'GMエントリー終了' },
             { name: '2026/2/23(月祝)', title: 'プレイヤー募集開始' },
             { name: '2026/3/22(日)', title: 'プレイヤー募集終了'},
