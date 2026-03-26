@@ -44,6 +44,12 @@ interface Sponsor {
 
 const sponsors: Sponsor[] = [
   {
+    name: '株式会社ボーンデジタル',
+    url: 'https://www.borndigital.co.jp/',
+    xUrl: 'https://x.com/bd_publishing',
+    xLabel: '@bd_publishing',
+  },
+  {
     name: 'リーチング・ムーン',
     url: 'https://reachingmoon.raku-uru.jp/',
     xUrl: 'https://x.com/TRPGspaceRMoon',
