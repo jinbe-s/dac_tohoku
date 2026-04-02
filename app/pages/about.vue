@@ -12,12 +12,12 @@
       <template v-for="k in ['PL1', 'PL2']" :key="k" v-slot:[k]>
         <v-row>
           <v-col cols="12">
-            <TextMainTitle title="PL募集要項" section-id="plRecruit" />
+            <TextMainTitle title="PL2次募集要項" section-id="plRecruit" />
             <div class="mt-3 text-body d-flex flex-column ga-2">
               <div>
                 <p class="text-subtitle-1"><strong>【募集日程】</strong></p>
-                <p>2026年2月23日(月祝)〜2026年3月22日(日) 23:59</p>
-                <p>応募結果連絡：2026年3月下旬〜4月上旬<br>※応募多数の場合、抽選とさせていただきます</p>
+                <p>2026年4月2日(木)〜2026年4月25日(土) 23:59</p>
+                <p>応募結果連絡：メールにて折り返し連絡</p>
               </div>
               <div>
                 <p class="text-subtitle-1"><strong>【参加費】</strong></p>
