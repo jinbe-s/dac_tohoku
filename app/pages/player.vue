@@ -240,6 +240,7 @@ const players: PlayerEntry[] = [
   { pl_number: 'PL-73', pl_name: 'あぶらげゅば', day1: { table_id: 'A-01', session_name: '「蒼き隼」号の殺人' },                                                    day2: { table_id: 'B-05', session_name: '5e「呪われしミストバロウ」' } },
   { pl_number: 'PL-74', pl_name: 'Oz',          day1: { table_id: 'A-03', session_name: '鰐神の涙（Dungeon #209掲載）' },                                          day2: { table_id: 'B-05', session_name: '5e「呪われしミストバロウ」' } },
   { pl_number: 'PL-75', pl_name: '羊毛マトン',   day1: { table_id: 'A-01', session_name: '「蒼き隼」号の殺人' },                                                    day2: null },
+  { pl_number: 'PL-76', pl_name: 'みゅう',       day1: { table_id: 'W-04', session_name: 'ネヴァーウィンターを覆う嵐、再び(改ニ)' },                                day2: { table_id: 'W-04', session_name: 'ネヴァーウィンターを覆う嵐、再び(改ニ)' } },
 ]
 
 const search = ref('')
