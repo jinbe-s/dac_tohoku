@@ -46,6 +46,7 @@
               <TextMainTitle :title="item.title" :section-id="item.sectionId" />
               <SectionSessionListTable
                 :items="item.items"
+                :pl2-table-ids="PL2_TABLE_IDS"
                 class="mt-5"
               />
             </v-col>
@@ -72,6 +73,7 @@
 
 <script lang="ts" setup>
 import type { SessionListResponse } from '~/composables/useSessionList'
+import { PL2_TABLE_IDS } from '~/config/pl2Sessions'
 
 const route = useRoute()
 const { public: pub } = useRuntimeConfig()

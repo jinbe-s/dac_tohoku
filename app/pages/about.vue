@@ -23,6 +23,20 @@
                 <p class="text-subtitle-1"><strong>【参加費】</strong></p>
                 <p>一般：1,000円、学生：500円(要学生証提示)</p>
               </div>
+              <div v-if="PL2_SESSIONS.length > 0">
+                <p class="text-subtitle-1"><strong>【募集対象卓】</strong></p>
+                <ul class="pl-4 mt-1">
+                  <li v-for="s in PL2_SESSIONS" :key="s.table_id">
+                    ({{ s.table_id }}) 「{{ s.session_name }}（DM：{{ s.dm_name }}）」
+                  </li>
+                </ul>
+                <p class="mt-2">
+                  各卓の詳細は
+                  <NuxtLink :to="{ name: 'session' }" :style="{ color: primary }">卓一覧</NuxtLink>
+                  をご確認ください。<br>
+                  ※応募のタイミングによっては、別卓への参加をお願いする可能性があります。
+                </p>
+              </div>
               <div>
                 <p class="text-subtitle-1"><strong>【応募方法】</strong></p>
                 <p>下記ボタンから応募フォームを開き、必要事項を記入してください。</p>
@@ -136,6 +150,7 @@
 
 <script setup lang="ts">
 import { FORM_URLS } from '~/config/forms'
+import { PL2_SESSIONS } from '~/config/pl2Sessions'
 
 useSiteMeta({
   title: '参加方法・エントリー受付',

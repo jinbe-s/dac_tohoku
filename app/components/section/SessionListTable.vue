@@ -36,12 +36,15 @@
             v-text="item.table_id"
           ></td>
           <td>
-            <NuxtLink
-              :to="{ hash: `#${item.table_id}` }"
-              class="text-decoration-none"
-              :style="{ color: 'rgb(var(--v-theme-primary))' }"
-              v-text="item.session_name"
-            />
+            <div class="d-flex align-center ga-2 flex-wrap">
+              <NuxtLink
+                :to="{ hash: `#${item.table_id}` }"
+                class="text-decoration-none"
+                :style="{ color: 'rgb(var(--v-theme-primary))' }"
+                v-text="item.session_name"
+              />
+              <NuxtLink v-if="pl2TableIds.includes(item.table_id)" :to="{ name: 'about', hash: '#plRecruit' }" class="pl2-badge text-decoration-none">PL2次募集中</NuxtLink>
+            </div>
           </td>
           <td :style="{ 'width': '180px', 'text-align': 'center' }" v-text="item.dm_name" />
           <td :style="{ 'width': '70px', 'text-align': 'center' }" v-text="item.system_name_short" />
@@ -60,9 +63,11 @@ import type { SessionListResponse } from '~/composables/useSessionList'
 type SessionListProps = {
   items: SessionListResponse[]
   class?: string
+  pl2TableIds?: string[]
 }
 const props = withDefaults(defineProps<SessionListProps>(), {
-  class: ''
+  class: '',
+  pl2TableIds: () => []
 })
 
 const headers = [
@@ -116,5 +121,16 @@ const headers = [
   :deep(.v-data-table-header__content) {
     justify-content: center;
   }
+}
+
+.pl2-badge {
+  display: inline-block;
+  background-color: rgb(var(--v-theme-accent));
+  color: rgb(var(--v-theme-on-primary));
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 1px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
 }
 </style>
