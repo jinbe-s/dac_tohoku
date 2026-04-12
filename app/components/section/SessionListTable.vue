@@ -43,7 +43,7 @@
                 :style="{ color: 'rgb(var(--v-theme-primary))' }"
                 v-text="item.session_name"
               />
-              <NuxtLink v-if="pl2TableIds.includes(item.table_id)" :to="{ name: 'about', hash: '#plRecruit' }" class="pl2-badge text-decoration-none">PL2次募集中</NuxtLink>
+              <NuxtLink v-if="isPl2Active && pl2TableIds.includes(item.table_id)" :to="{ name: 'about', hash: '#plRecruit' }" class="pl2-badge text-decoration-none">PL2次募集中</NuxtLink>
             </div>
           </td>
           <td :style="{ 'width': '180px', 'text-align': 'center' }" v-text="item.dm_name" />
@@ -59,6 +59,10 @@
 
 <script lang="ts" setup>
 import type { SessionListResponse } from '~/composables/useSessionList'
+import { useEventPhase } from '~/composables/useEventPhase'
+
+const { isActive } = useEventPhase()
+const isPl2Active = isActive('PL2')
 
 type SessionListProps = {
   items: SessionListResponse[]
