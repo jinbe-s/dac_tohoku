@@ -44,12 +44,6 @@ interface Sponsor {
 
 const sponsors: Sponsor[] = [
   {
-    name: 'スタピ堂',
-    url: 'https://store.shopping.yahoo.co.jp/sutapido/',
-    xUrl: 'https://x.com/sutapido',
-    xLabel: '@sutapido',
-  },
-  {
     name: '株式会社ホビージャパン',
     url: 'https://hj-trpg.com/',
     xUrl: 'https://x.com/HJ_gamemedia',
@@ -60,6 +54,12 @@ const sponsors: Sponsor[] = [
     url: 'https://www.borndigital.co.jp/',
     xUrl: 'https://x.com/bd_publishing',
     xLabel: '@bd_publishing',
+  },
+  {
+    name: 'スタピ堂',
+    url: 'https://store.shopping.yahoo.co.jp/sutapido/',
+    xUrl: 'https://x.com/sutapido',
+    xLabel: '@sutapido',
   },
   {
     name: 'リーチング・ムーン',
