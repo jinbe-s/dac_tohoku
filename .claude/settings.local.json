@@ -9,7 +9,19 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(claude init:*)",
-      "Bash(xargs cat:*)"
+      "Bash(xargs cat:*)",
+      "Bash(npx nuxi typecheck:*)",
+      "Bash(npx nuxi build:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Bash(yarn dev:*)",
+      "Bash(pkill -f \"nuxt dev\")",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)"
     ],
     "deny": [],
     "ask": []

@@ -56,6 +56,12 @@ const sponsors: Sponsor[] = [
     xLabel: '@bd_publishing',
   },
   {
+    name: '駒の時間',
+    url: 'https://komanotoki.com/',
+    xUrl: 'https://x.com/koma_komanotoki',
+    xLabel: '@koma_komanotoki',
+  },
+  {
     name: 'スタピ堂',
     url: 'https://store.shopping.yahoo.co.jp/sutapido/',
     xUrl: 'https://x.com/sutapido',
