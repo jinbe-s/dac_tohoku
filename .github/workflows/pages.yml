@@ -10,11 +10,13 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       NUXT_PUBLIC_SITE_NAME: ${{ vars.NUXT_PUBLIC_SITE_NAME || 'DAC東北' }}
       NUXT_PUBLIC_SITE_DESCRIPTION: ${{ vars.NUXT_PUBLIC_SITE_DESCRIPTION || '宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション' }}
       NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL || 'https://dac-tohoku.com' }}
