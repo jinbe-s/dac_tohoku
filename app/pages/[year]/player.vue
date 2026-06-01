@@ -2,13 +2,13 @@
   <v-container class="py-10">
     <v-card variant="tonal" color="primary" rounded="lg" class="mb-6 py-4 px-4">
       <div class="d-flex flex-column align-center text-center">
-        <div class="text-body-1 font-weight-bold">2026年に実施した際の内容です</div>
+        <div class="text-body-1 font-weight-bold">{{ year }}年に実施した際の内容です</div>
       </div>
     </v-card>
 
     <TextMainTitle title="参加卓一覧" />
     <p class="mt-4 mb-6 text-body-1">
-      PL番号と参加卓をご確認ください。ご不明な点はお問い合わせフォームまたは公式X(旧Twitter)にてご連絡ください。
+      PL番号と参加卓をご確認ください。
     </p>
 
     <!-- 検索 -->
@@ -109,17 +109,10 @@
         該当するPLが見つかりません
       </p>
     </div>
-
   </v-container>
 </template>
 
 <script lang="ts" setup>
-useSiteMeta({
-  title: '参加卓一覧',
-  description: 'DAC東北の参加卓一覧。PL番号・PL名と1日目・2日目の参加卓をご確認いただけます。',
-  keywords: 'DAC東北,参加卓一覧,PL,プレイヤー,卓'
-})
-
 type SessionInfo = {
   table_id: string
   session_name: string
@@ -132,10 +125,13 @@ type PlayerEntry = {
   day2: SessionInfo | null
 }
 
-const { data } = await useFetch<PlayerEntry[]>('/data/players_2026.json', {
+const route = useRoute()
+const year = route.params.year as string
+
+const { data } = await useFetch<PlayerEntry[]>(`/data/players_${year}.json`, {
   server: false,
   default: () => [] as PlayerEntry[],
-  key: 'players2026'
+  key: `players_${year}`
 })
 
 const players = computed(() => data.value ?? [])
@@ -156,6 +152,12 @@ const headers = [
   { title: '1日目参加卓', key: 'day1' },
   { title: '2日目参加卓', key: 'day2' },
 ]
+
+useSiteMeta({
+  title: `${year}年 参加卓一覧`,
+  description: `DAC東北 ${year}年の参加卓一覧。PL番号・PL名と1日目・2日目の参加卓。`,
+  keywords: `DAC東北,${year},参加卓一覧,PL,プレイヤー,卓`
+})
 </script>
 
 <style scoped lang="scss">

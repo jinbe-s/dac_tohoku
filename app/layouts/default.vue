@@ -78,7 +78,6 @@ const drawer = ref(false)
 // SSOT: ナビゲーションメニューの定義（単一の情報源）
 const navItems = [
 	{ label: 'Home', to: { name: 'index' } },
-	{ label: '参加案内', to: { name: 'about' } },
 	{ label: '卓一覧', to: { name: 'session' } },
 	{ label: '参加卓一覧', to: { name: 'player' } },
 	{ label: 'お問い合わせ', to: { name: 'contact' } },

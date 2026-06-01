@@ -36,7 +36,7 @@ export const useSessionList = (overrideUrl?: string) => {
   const key = overrideUrl ? 'sessionListPreview' : 'sessionList'
 
   const getSessionList = () =>
-    useFetch<SessionListResponse>(url, {
+    useFetch<SessionListResponse[]>(url, {
       method: 'GET',
       server: false,
       default: () => [] as SessionListResponse[],
@@ -45,6 +45,18 @@ export const useSessionList = (overrideUrl?: string) => {
       headers: { 'cache-control': 'no-cache' },
       retry: 1,
       key
+    })
+
+  return { getSessionList }
+}
+
+export const useSessionListFromJson = (jsonPath: string) => {
+  const getSessionList = () =>
+    useFetch<SessionListResponse[]>(jsonPath, {
+      method: 'GET',
+      server: false,
+      default: () => [] as SessionListResponse[],
+      key: `sessionListJson_${jsonPath}`
     })
 
   return { getSessionList }

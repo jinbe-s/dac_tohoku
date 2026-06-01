@@ -32,15 +32,28 @@
     <v-row>
       <v-col cols="12">
         <text-main-title title="過去の開催" />
-        <div class="mt-3 text-body d-flex flex-column ga-2">
-          <p>DAC東北2025以前の開催は旧サイトからご確認ください<br>
+        <div class="mt-3 text-body d-flex flex-column ga-4">
+          <div>
+            <p class="font-weight-bold mb-2">2026年</p>
+            <div class="d-flex flex-column ga-1">
+              <NuxtLink to="/2026/sessions" class="text-decoration-none" :style="{ color: 'rgb(var(--v-theme-primary))' }">
+                卓一覧<v-icon size="x-small" icon="mdi-chevron-right" />
+              </NuxtLink>
+              <NuxtLink to="/2026/player" class="text-decoration-none" :style="{ color: 'rgb(var(--v-theme-primary))' }">
+                参加卓一覧<v-icon size="x-small" icon="mdi-chevron-right" />
+              </NuxtLink>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">DAC東北2025以前の開催は旧サイトからご確認ください</p>
             <a
               href="https://dac.10yearsafter.info/"
               class="text-decoration-none"
               :style="{ color: 'rgb(var(--v-theme-primary))' }"
               target="_blank"
               rel="noopener noreferrer"
-            >https://dac.10yearsafter.info/<v-icon size="x-small" icon="mdi-open-in-new" /></a></p>
+            >https://dac.10yearsafter.info/<v-icon size="x-small" icon="mdi-open-in-new" /></a>
+          </div>
         </div>
       </v-col>
     </v-row>
