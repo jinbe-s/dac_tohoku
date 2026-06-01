@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20, cache: 'yarn' }
+        with: { node-version: 22, cache: 'yarn' }
       - run: yarn install --frozen-lockfile
       - run: npx nuxi generate
       - uses: actions/upload-pages-artifact@v3
