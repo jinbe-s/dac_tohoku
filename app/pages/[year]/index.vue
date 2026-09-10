@@ -25,6 +25,24 @@
           </div>
         </v-card>
 
+        <v-row v-if="edition">
+          <v-col cols="12">
+            <TextMainTitle title="開催情報" section-id="eventInfo" />
+          </v-col>
+          <v-col cols="12">
+            <SectionEventInfo :edition="edition" variant="archive" />
+          </v-col>
+          <v-col v-for="stat in stats" :key="stat.title" cols="12" sm="4">
+            <v-sheet class="pa-4 mx-auto border-md rounded-lg text-center">
+              <p class="my-0">
+                <strong class="font-weight-bold">{{ stat.title }}</strong>
+                <span class="text-primary text-h5 font-weight-bold d-block">{{ stat.value }}</span>
+                <span v-if="stat.text" class="text-body-2">{{ stat.text }}</span>
+              </p>
+            </v-sheet>
+          </v-col>
+        </v-row>
+
         <div class="my-3">
           <v-row>
             <template v-for="item in [
@@ -81,9 +99,25 @@
 import type { SessionListResponse } from '~/composables/useSessionList'
 import { useSessionListFromJson } from '~/composables/useSessionList'
 import { PL2_TABLE_IDS } from '~/config/pl2Sessions'
+import { EDITIONS, type EditionKey } from '~/config/editions'
 
 const route = useRoute()
 const year = route.params.year as string
+
+// 開催情報が登録されている年だけ、卓一覧の上に開催情報と参加実績を出す
+const edition = EDITIONS[year as EditionKey]
+
+const stats = computed(() => edition
+  ? [
+      { title: '卓数', value: `${edition.stats.sessionCount}卓`, text: '' },
+      { title: 'DM/GM', value: `${edition.stats.gmCount}名`, text: '' },
+      {
+        title: '参加プレイヤー',
+        value: `${edition.stats.playerCount}名`,
+        text: `延べ${edition.stats.playerEntryCount}名`
+      }
+    ]
+  : [])
 
 const { getSessionList } = useSessionListFromJson(`/data/sessions_${year}.json`)
 const { data, pending, error } = await getSessionList()

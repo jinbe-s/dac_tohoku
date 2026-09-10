@@ -5,6 +5,7 @@
   <UtilJsonLd :json-ld="organizationSchema" />
 
   <v-container class="py-10">
+    <SectionEditionNotice :edition="edition" />
     <v-row>
       <v-col cols="12" md="6">
         <div class="d-flex flex-column ga-2">
@@ -15,7 +16,7 @@
             color="primary"
           />
           <h1 class="text-h4 text-primary text-center-sm">
-            <strong>DAC東北 2026</strong>
+            <strong>{{ edition.name }}</strong>
           </h1>
           <p class="my-0 text-textSecondary">
             DAC東北は宮城県仙台市で開催するTRPGコンベンションです。<br>
@@ -59,7 +60,7 @@
         </div>
       </v-col>
       <v-col cols="12" md="6">
-        <SectionEventInfo />
+        <SectionEventInfo :edition="edition" />
       </v-col>
     </v-row>
     <v-row>
@@ -118,11 +119,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <template v-for="(item, i) in [
-        { title: 'GM/DM参加', price: '0', text: 'イベント参加費は不要' },
-        { title: 'PL一般参加', price: '1,000', text: '当日受付で支払い' },
-        { title: 'PL学生参加', price: '500', text: '要学生証提示' },
-      ]" :key="i">
+      <template v-for="(item, i) in edition.fees" :key="i">
         <v-col cols="12" sm="4">
           <UiPriceCard
             :title="item.title"
@@ -181,6 +178,9 @@
 
 <script setup lang="ts">
 import InlineIconText from '~/components/ui/InlineIconText.vue'
+import { DISPLAY_EDITION, getEdition } from '~/config/editions'
+
+const edition = getEdition(DISPLAY_EDITION)
 
 const { isEventPhaseActive, isActive } = useEventPhase()
 const plText = computed(() => isActive('PL2').value ? 'PL2次' : isActive('PL1').value ? 'PL' : '')
@@ -191,56 +191,44 @@ const phaseText = computed(() => {
 })
 
 useSiteMeta({
-  title: 'DAC東北 2026 - TRPGコンベンション募集要項',
-  description: 'DAC東北 2026の開催情報。仙台市のTRPGコンベンション。日程、会場、参加費、アクセス、最新情報を掲載。D&D、Pathfinderなど D20システムを楽しむイベント。',
-  keywords: 'DAC東北,TRPG,コンベンション,仙台,D&D,Pathfinder,D20システム,2026'
+  title: 'DAC東北 - 仙台のTRPGコンベンション',
+  description: `DAC東北は宮城県仙台市で開催するTRPGコンベンションです。${edition.name}は終了しました（卓一覧を公開中）。${edition.year + 1}年の開催情報は準備中です。`,
+  keywords: 'DAC東北,TRPG,コンベンション,仙台,D&D,Pathfinder,D20システム'
 })
 
 // Event JSON-LD Schema
 const eventSchema = {
   '@context': 'https://schema.org',
   '@type': 'Event',
-  name: 'DAC東北 2026',
-  startDate: '2026-05-30T10:00:00+09:00',
-  endDate: '2026-05-31T18:00:00+09:00',
+  name: edition.name,
+  startDate: edition.startDate,
+  endDate: edition.endDate,
   eventStatus: 'https://schema.org/EventScheduled',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   location: {
     '@type': 'Place',
-    name: 'エル・パーク仙台 セミナーホール1・2',
+    name: `${edition.venue.name} ${edition.venue.room}`,
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'JP',
-      addressRegion: '宮城県',
-      addressLocality: '仙台市青葉区',
-      streetAddress: '一番町4-11-1',
-      postalCode: '980-0811'
+      addressRegion: edition.venue.region,
+      addressLocality: edition.venue.locality,
+      streetAddress: edition.venue.street,
+      postalCode: edition.venue.postalCode
     }
   },
-  description: '宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション「DAC東北」。D&D、Pathfinderなどのシステムで様々なセッションをお楽しみいただけます。',
+  description: edition.description,
   organizer: {
     '@type': 'Organization',
     name: 'DAC東北',
     url: 'https://dac-tohoku.com'
   },
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'GM/DM参加',
-      price: '0',
-      priceCurrency: 'JPY',
-      availability: 'https://schema.org/InStock',
-      validFrom: '2026-01-17T00:00:00+09:00'
-    },
-    {
-      '@type': 'Offer',
-      name: 'プレイヤー参加',
-      price: '1000',
-      priceCurrency: 'JPY',
-      availability: 'https://schema.org/InStock',
-      validFrom: '2026-02-23T00:00:00+09:00'
-    }
-  ]
+  offers: edition.fees.map(fee => ({
+    '@type': 'Offer',
+    name: fee.title,
+    price: fee.price.replace(/,/g, ''),
+    priceCurrency: 'JPY'
+  }))
 }
 
 // Organization JSON-LD Schema
