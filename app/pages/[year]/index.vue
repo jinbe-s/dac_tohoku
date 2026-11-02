@@ -107,7 +107,7 @@ const year = route.params.year as string
 // 開催情報が登録されている年だけ、卓一覧の上に開催情報と参加実績を出す
 const edition = EDITIONS[year as EditionKey]
 
-const stats = computed(() => edition
+const stats = computed(() => edition?.stats
   ? [
       { title: '卓数', value: `${edition.stats.sessionCount}卓`, text: '' },
       { title: 'DM/GM', value: `${edition.stats.gmCount}名`, text: '' },

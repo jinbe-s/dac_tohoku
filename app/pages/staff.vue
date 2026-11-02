@@ -41,7 +41,7 @@
                   {{ edition.dateText }}<br>
                   {{ edition.venue.name }} {{ edition.venue.room }}
                 </p>
-                <p class="text-body-2 mb-0">
+                <p v-if="edition.stats" class="text-body-2 mb-0">
                   全{{ edition.stats.sessionCount }}卓 ／ DM/GM {{ edition.stats.gmCount }}名 ／ 参加プレイヤー {{ edition.stats.playerCount }}名
                 </p>
                 <v-btn

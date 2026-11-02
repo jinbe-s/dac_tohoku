@@ -87,11 +87,11 @@
         <SectionScheduleList
           class="mt-3"
           :items="[
-            // { name: '2026/1/17(土)', title: 'GMエントリー開始' },
-            { name: '2026/2/15(日)', title: 'GMエントリー終了' },
-            { name: '2026/2/23(月祝)', title: 'プレイヤー募集開始' },
-            { name: '2026/3/22(日)', title: 'プレイヤー募集終了'},
-            { name: '2026/3月後半〜4月頭', title: '卓分け発表' }
+            { name: '2027/1/16(土)', title: 'DM/GMエントリー開始' },
+            { name: '2027/2/14(日)', title: 'DM/GMエントリー終了' },
+            { name: '2027/2/23(火祝)', title: 'PLエントリー開始' },
+            { name: '2027/3/22(月祝)', title: 'PLエントリー終了' },
+            { name: '2027/3月末〜4月頭頃', title: '卓分け結果発表' }
           ]"
         />
       </v-col>
@@ -101,11 +101,10 @@
           class="mt-3"
           :items="[
             {
-              name: '09:30',
-              title: '開場',
-              text: 'お手伝いいただける方は09:00からの設営補助をお願いします',
+              name: '10:00',
+              title: '開場・受付開始',
+              text: 'お手伝いいただける方は09:00からの設営補助への参加もお願いします',
             },
-            { name: '10:00', title: '受付開始' },
             { name: '10:30', title: '開会式' },
             { name: '18:20', title: 'セッション終了' },
             { name: '18:30', title: '閉会式' },
@@ -131,7 +130,7 @@
     </v-row>
     <v-row>
       <v-col cols="12">
-        <TextMainTitle title="協賛" section-id="sponsor" />
+        <TextMainTitle title="協賛(2026年開催時)" section-id="sponsor" />
         <p class="mt-2 text-body-2 text-textSecondary">プレゼント抽選会の景品をご提供いただいている企業・団体様です。(50音順)</p>
       </v-col>
     </v-row>
@@ -192,7 +191,9 @@ const phaseText = computed(() => {
 
 useSiteMeta({
   title: 'DAC東北 - 仙台のTRPGコンベンション',
-  description: `DAC東北は宮城県仙台市で開催するTRPGコンベンションです。${edition.name}は終了しました（卓一覧を公開中）。${edition.year + 1}年の開催情報は準備中です。`,
+  description: edition.status === 'closed'
+    ? `DAC東北は宮城県仙台市で開催するTRPGコンベンションです。${edition.name}は終了しました（卓一覧を公開中）。${edition.year + 1}年の開催情報は準備中です。`
+    : `DAC東北は宮城県仙台市で開催するTRPGコンベンションです。${edition.name}は${edition.dateText}に開催予定です。`,
   keywords: 'DAC東北,TRPG,コンベンション,仙台,D&D,Pathfinder,D20システム'
 })
 

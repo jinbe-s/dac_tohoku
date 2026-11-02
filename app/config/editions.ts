@@ -12,7 +12,7 @@
  * 別途フラグを消して回る必要はない。
  */
 
-export type EditionKey = '2026'
+export type EditionKey = '2026' | '2027'
 
 export type EditionFee = {
   title: string
@@ -54,8 +54,9 @@ export type EventEdition = {
   /**
    * 開催実績。開催後は変わらない事実なので、会場や日程と同じく固定値で持つ。
    * 卓一覧JSONの取得可否に関わらず表示できるようにする狙いもある。
+   * 開催前の回には実績がないため持たない。
    */
-  stats: {
+  stats?: {
     /** 卓数。public/data/sessions_<年>.json の件数 */
     sessionCount: number
     /** DM/GM人数。同JSONの dm_name を重複除去した数（複数卓を担当した人は1人と数える） */
@@ -116,12 +117,43 @@ const edition2026: EventEdition = {
     '宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション「DAC東北」。D&D、Pathfinderなどのシステムで様々なセッションをお楽しみいただけます。'
 }
 
+const edition2027: EventEdition = {
+  key: '2027',
+  year: 2027,
+  name: 'DAC東北 2027',
+  status: 'upcoming',
+  dateText: '2027年5月29日(土)・5月30日(日) 10:00〜19:15',
+  dateSubText: '開場 10:00／開会式 10:30／閉会式 18:30',
+  venue: {
+    name: '東京エレクトロンホール宮城',
+    room: '会議室棟 6階',
+    address: '宮城県仙台市青葉区国分町3-3-7',
+    postalCode: '980-0803',
+    region: '宮城県',
+    locality: '仙台市青葉区',
+    street: '国分町3-3-7'
+  },
+  accessText: '仙台市営地下鉄南北線「勾当台公園駅」下車\n（「公園出口2」より徒歩5分）',
+  feeText: 'DM・GM参加 ¥500 ／ 一般 ¥1,500 ／ 学生各500円引き',
+  fees: [
+    { title: 'GM/DM参加', price: '500', text: '学生は無料（要学生証提示）' },
+    { title: 'PL一般参加', price: '1,500', text: '当日受付で支払い' },
+    { title: 'PL学生参加', price: '1,000', text: '要学生証提示' }
+  ],
+  sessionsPath: '/2027',
+  startDate: '2027-05-29T10:00:00+09:00',
+  endDate: '2027-05-30T19:15:00+09:00',
+  description:
+    '宮城県仙台市で開催する、D20システムを楽しむTRPGコンベンション「DAC東北」。D&D、Pathfinderなどのシステムで様々なセッションをお楽しみいただけます。'
+}
+
 export const EDITIONS: Record<EditionKey, EventEdition> = {
-  '2026': edition2026
+  '2026': edition2026,
+  '2027': edition2027
 }
 
 /** トップページが表示している開催回 */
-export const DISPLAY_EDITION: EditionKey = '2026'
+export const DISPLAY_EDITION: EditionKey = '2027'
 
 /** 過去の開催として掲載する回（新しい順） */
 export const ARCHIVED_EDITIONS: EditionKey[] = ['2026']
